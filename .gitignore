@@ -11,9 +11,11 @@
 # next.js
 /.next/
 /out/
+public/sitemap.xml
 
 # production
 /build
+*.xml
 
 # misc
 .DS_Store
