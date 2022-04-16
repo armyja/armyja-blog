@@ -32,5 +32,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.DEPLOY }}
-          cname: home.armyja.cn
+          cname: armyja.cn
           publish_dir: ./out
