@@ -21,9 +21,14 @@ module.exports = module.exports = isProd
             urlPattern: /^https?.*/,
             handler: 'NetworkFirst',
             options: {
-              cacheName: 'offlineCache',
+              cacheName: 'https-calls',
+              networkTimeoutSeconds: 15,
               expiration: {
-                maxEntries: 200,
+                maxEntries: 150,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
               },
             },
           },
