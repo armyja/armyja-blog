@@ -14,7 +14,8 @@ const nextConfig = {
 module.exports = module.exports = isProd
   ? withOffline({
       workboxOpts: {
-        swDest: process.env.NEXT_EXPORT ? 'service-worker.js' : 'static/service-worker.js',
+        swDest: 'service-worker.js',
+        // swDest: process.env.NEXT_EXPORT ? 'service-worker.js' : 'static/service-worker.js',
         runtimeCaching: [
           {
             urlPattern: /^https?.*/,
