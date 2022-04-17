@@ -27,6 +27,7 @@ jobs:
           npm i
           npm run build
           npm run export
+          mkdir -p out/_next/server/
           cp --path .next/server/middleware-* out/_next/server/
 
       - name: Deploy
