@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const withOffline = require('next-offline')
 const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
@@ -7,7 +8,26 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  assetPrefix: isProd ? '' : ''
+  assetPrefix: isProd ? '' : '',
 }
 
-module.exports = nextConfig
+module.exports = module.exports = isProd
+  ? withOffline({
+      workboxOpts: {
+        swDest: process.env.NEXT_EXPORT ? 'service-worker.js' : 'static/service-worker.js',
+        runtimeCaching: [
+          {
+            urlPattern: /^https?.*/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'offlineCache',
+              expiration: {
+                maxEntries: 200,
+              },
+            },
+          },
+        ],
+      },
+      ...nextConfig,
+    })
+  : nextConfig
