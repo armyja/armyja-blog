@@ -12,9 +12,8 @@ sinaWeibo: 'https://weibo.com/armyja'
 
 ## 现状
 
-社交英文名：Armyja  
-中文昵称：艾米杰  
 笔名：如若不燃  
+社交英文名：Armyja  
 前端开发者，熟悉 NodeJS、Vue，努力成为一名跨端工程师。
 
 ## 职业经历
