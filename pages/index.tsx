@@ -1,73 +1,111 @@
+import Link from '@/components/Link'
+import { PageSEO } from '@/components/SEO'
+import Tag from '@/components/Tag'
+import siteMetadata from '@/data/siteMetadata'
+import { getAllFilesFrontMatter } from '@/lib/mdx'
+import formatDate from '@/lib/utils/formatDate'
+import { Blog } from '@/lib/types'
+
+const MAX_DISPLAY = 5
+
+export async function getStaticProps() {
+  const posts = await getAllFilesFrontMatter('blog')
+
+  return { props: { posts } }
+}
+
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>如若不燃</title>
-        <meta name="description" content="酷爱蹦跶，穿梭堂狱" />
         <link rel="icon" href="/favicon-196.png" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://armyja.cn">Armyja&apos;s blog!</a>
-        </h1>
-
-        <p className={styles.description}>
-          <code className={styles.code}>施工中...</code>
-        </p>
-
-        <div className={styles.grid}>
-          {/* <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a> */}
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-        <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">
-          粤ICP备16027191号-1
-        </a>
-      </footer>
-    </div>
+      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <div className="flex flex-col items-stretch">
+        <main className="flex-grow">
+          <div className="divide-y divide-gray-200 dark:divide-gray-700">
+            <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+              <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+                Armyja
+              </h1>
+              <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+                {siteMetadata.description}
+              </p>
+            </div>
+            <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+              {!posts.length && 'No posts found.'}
+              {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
+                const { slug, date_published, title, summary, tags }: Blog = frontMatter
+                return (
+                  <li key={slug} className="py-12">
+                    <article>
+                      <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                        <dl>
+                          <dt className="sr-only">Published on</dt>
+                          <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                            <time dateTime={date_published}>{formatDate(date_published)}</time>
+                          </dd>
+                        </dl>
+                        <div className="space-y-5 xl:col-span-3">
+                          <div className="space-y-6">
+                            <div>
+                              <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                                <Link
+                                  href={`/blog/${slug}`}
+                                  className="text-gray-900 dark:text-gray-100"
+                                >
+                                  {title}
+                                </Link>
+                              </h2>
+                              <div className="flex flex-wrap">
+                                {tags.map((tag) => (
+                                  <Tag key={tag} text={tag} />
+                                ))}
+                              </div>
+                            </div>
+                            <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                              {summary}
+                            </div>
+                          </div>
+                          <div className="text-base font-medium leading-6">
+                            <Link
+                              href={`/blog/${slug}`}
+                              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                              aria-label={`Read "${title}"`}
+                            >
+                              阅读更多 &rarr;
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+          {posts.length > MAX_DISPLAY && (
+            <div className="flex justify-end text-base font-medium leading-6">
+              <Link
+                href="/blog"
+                className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                aria-label="all posts"
+              >
+                All Posts &rarr;
+              </Link>
+            </div>
+          )}
+          {/* {siteMetadata.newsletter.provider !== '' && (
+            <div className="flex items-center justify-center pt-4">
+              <NewsletterForm />
+            </div>
+          )} */}
+        </main>
+      </div>
+    </>
   )
 }
 

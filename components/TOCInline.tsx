@@ -1,8 +1,4 @@
-type TocHeading = {
-  value: string
-  depth: number
-  url: string
-}
+import { TocHeading } from '@/lib/types'
 
 type TOCInlineProps = {
   toc: TocHeading[]

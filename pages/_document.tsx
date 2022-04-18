@@ -34,7 +34,6 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#27ae60" />
           <meta name="msapplication-navbutton-color" content="#27ae60" />
           <meta name="msapplication-starturl" content="/" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         </Head>
         <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
           <Main />

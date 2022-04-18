@@ -22,7 +22,7 @@ const components = {
 type SocialIconProps = {
   kind: 'mail' | 'github' | 'facebook' | 'youtube' | 'linkedin' | 'twitter' | 'sinaWeibo' | 'zhiHu'
   href: string
-  size: string
+  size?: string
 }
 const SocialIcon = ({ kind, href, size = '8' }: SocialIconProps) => {
   if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)))

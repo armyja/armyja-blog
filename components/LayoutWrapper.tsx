@@ -7,6 +7,7 @@ import Footer from './Footer'
 // import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import { ReactNode } from 'react'
+import MobileNav from './MobileNav'
 
 const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   return (
@@ -16,7 +17,7 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
-                <div className="mr-3">
+                <div className="relative mt-2 mr-3 h-8 w-8">
                   <Logo />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
@@ -42,7 +43,7 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
               ))}
             </div>
             <ThemeSwitch />
-            {/* <MobileNav /> */}
+            <MobileNav />
           </div>
         </header>
         <main className="mb-auto">{children}</main>
