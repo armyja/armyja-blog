@@ -7,7 +7,7 @@ email: 546323405@qq.com
 # twitter: https://twitter.com/Twitter
 # linkedin: https://www.linkedin.com
 github: https://github.com/armyja
-sinaWeibo: 'https://weibo.com/armyja'
+sinaWeibo: sinaweibo://userinfo?uid=1770048285
 ---
 
 ## 现状
