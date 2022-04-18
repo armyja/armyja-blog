@@ -1,9 +1,9 @@
 {
   "name": "如若不燃",
   "short_name": "如若不燃",
-  "theme_color": "#27ae60",
+  "theme_color": "#FFFFFF",
   "description": "酷爱蹦跶，穿梭堂狱",
-  "background_color": "#2ecc71",
+  "background_color": "#FFFFFF",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
