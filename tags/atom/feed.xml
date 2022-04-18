@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Mon, 09 Jan 2017 09:34:39 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/atom/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/atom-make-package-list</guid>
+    <title>Atom 导出包列表</title>
+    <link>https://armyja.cn/blog/atom-make-package-list</link>
+    <description>Make an Atom Package List and install the given Atom package from `my-packages.txt` to `~/.atom/packages/&lt;package_name&gt;` .</description>
+    <pubDate>Mon, 09 Jan 2017 09:34:39 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>Atom</category>
+  </item>
+
+    </channel>
+  </rss>

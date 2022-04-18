@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Wed, 18 Jan 2017 15:16:22 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/game/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/undertale</guid>
+    <title>Undertale 传说之下</title>
+    <link>https://armyja.cn/blog/undertale</link>
+    <description>第一次了解 Undertale，是在网易云音乐听到其 OST「Stronger Than You」。这是一款打破常规的另类 RPG，且乐评率在 Steam 排名第一，是 2015 Steam 最佳游戏之一。好奇心促使我对它一探究竟。</description>
+    <pubDate>Wed, 18 Jan 2017 15:16:22 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>Game</category>
+  </item>
+
+    </channel>
+  </rss>

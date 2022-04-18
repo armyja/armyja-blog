@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Sun, 15 Oct 2017 07:15:25 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/https/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/introduction-to-https</guid>
+    <title>图解 HTTPS</title>
+    <link>https://armyja.cn/blog/introduction-to-https</link>
+    <description>我们都知道 HTTPS 能够加密信息，以免敏感信息被第三方获取。所以很多银行网站或电子邮箱等等安全级别较高的服务都会采用 HTTPS 协议。</description>
+    <pubDate>Sun, 15 Oct 2017 07:15:25 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>HTTPS</category>
+  </item>
+
+    </channel>
+  </rss>

@@ -1,0 +1,74 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Fri, 10 Jun 2016 16:41:40 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/css/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/yong-jquery-shi-xian-xiang-ying-shi-dao-hang</guid>
+    <title>造轮子——实现响应式导航</title>
+    <link>https://armyja.cn/blog/yong-jquery-shi-xian-xiang-ying-shi-dao-hang</link>
+    <description>笔者太懒，不会提供响应式导航的完整代码。不过你会从本文中了解到响应式导航的实现原理。掌握了原理，你便会明白他并不神秘。</description>
+    <pubDate>Fri, 10 Jun 2016 16:41:40 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>HTML</category><category>CSS</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/css-nth-child-usage</guid>
+    <title>CSS：nth-child 的用法</title>
+    <link>https://armyja.cn/blog/css-nth-child-usage</link>
+    <description>前端的哥们想必都接触过 css 中一个神奇的玩意，可以轻松选取你想要的标签并给与修改添加样式，是不是很给力，它就是 “:nth-child”。</description>
+    <pubDate>Mon, 04 Apr 2016 07:34:30 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>CSS</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/webstorm-zi-dong-bian-yi-scss-wen-jian</guid>
+    <title>WebStorm：自动编译  scss 文件</title>
+    <link>https://armyja.cn/blog/webstorm-zi-dong-bian-yi-scss-wen-jian</link>
+    
+    <pubDate>Mon, 04 Apr 2016 04:42:55 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>WebStorm</category><category>CSS</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/css-vewport-based-typography</guid>
+    <title>CSS：基于视窗单位的排版</title>
+    <link>https://armyja.cn/blog/css-vewport-based-typography</link>
+    <description>探索一下视窗单位以及如何在响应式排版中使用它们。</description>
+    <pubDate>Sun, 03 Apr 2016 09:16:47 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>CSS</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/css-box-sizing</guid>
+    <title>CSS：box-sizing</title>
+    <link>https://armyja.cn/blog/css-box-sizing</link>
+    <description>在我们讨论宽度的时候，我们应该讲下与它相关的一个重点知识：盒模型。当你设置了元素的宽度，实际展现的元素却能够超出你的设置：因为元素的边框和内边距会撑开元素。看下面的例子，两个相同宽度的元素显示的实际宽度却不一样。</description>
+    <pubDate>Sat, 02 Apr 2016 16:27:31 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>CSS</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/html-clearfix-qing-chu-fu-dong</guid>
+    <title>CSS：clearfix 清除浮动</title>
+    <link>https://armyja.cn/blog/html-clearfix-qing-chu-fu-dong</link>
+    
+    <pubDate>Sat, 02 Apr 2016 11:37:24 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>CSS</category>
+  </item>
+
+    </channel>
+  </rss>

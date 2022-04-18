@@ -1,0 +1,34 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Tue, 18 Sep 2018 15:40:39 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/diary/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/half-year-review-2018</guid>
+    <title>半年总结</title>
+    <link>https://armyja.cn/blog/half-year-review-2018</link>
+    <description>将近半年没发博客了，更新一下近况。</description>
+    <pubDate>Tue, 18 Sep 2018 15:40:39 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>Diary</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/2017</guid>
+    <title>2017 年度总结</title>
+    <link>https://armyja.cn/blog/2017</link>
+    <description>这是悲伤和喜悦并存的一年啊。</description>
+    <pubDate>Mon, 01 Jan 2018 07:22:18 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>Diary</category>
+  </item>
+
+    </channel>
+  </rss>

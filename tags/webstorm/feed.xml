@@ -1,0 +1,44 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Wed, 13 Apr 2016 10:14:52 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/webstorm/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/webstorm-emmet-kuai-jie-jian</guid>
+    <title>Webstorm 快捷键</title>
+    <link>https://armyja.cn/blog/webstorm-emmet-kuai-jie-jian</link>
+    
+    <pubDate>Wed, 13 Apr 2016 10:14:52 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>WebStorm</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/webstorm-zi-dong-bian-yi-jade-wen-jian</guid>
+    <title>WebStorm：自动编译  jade 文件</title>
+    <link>https://armyja.cn/blog/webstorm-zi-dong-bian-yi-jade-wen-jian</link>
+    
+    <pubDate>Mon, 04 Apr 2016 04:53:09 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>WebStorm</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/webstorm-zi-dong-bian-yi-scss-wen-jian</guid>
+    <title>WebStorm：自动编译  scss 文件</title>
+    <link>https://armyja.cn/blog/webstorm-zi-dong-bian-yi-scss-wen-jian</link>
+    
+    <pubDate>Mon, 04 Apr 2016 04:42:55 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>WebStorm</category><category>CSS</category>
+  </item>
+
+    </channel>
+  </rss>

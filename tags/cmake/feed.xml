@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Fri, 22 Sep 2017 06:40:11 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/cmake/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/cmake-debug-release</guid>
+    <title>CMake Debug 模式和 Release 模式</title>
+    <link>https://armyja.cn/blog/cmake-debug-release</link>
+    
+    <pubDate>Fri, 22 Sep 2017 06:40:11 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>C++</category><category>CMake</category>
+  </item>
+
+    </channel>
+  </rss>

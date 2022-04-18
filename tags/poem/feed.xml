@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Fri, 06 Oct 2017 11:11:30 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/poem/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/chun-ye-chang-ling-qiu-xiao-ling</guid>
+    <title>春谒长陵秋孝陵</title>
+    <link>https://armyja.cn/blog/chun-ye-chang-ling-qiu-xiao-ling</link>
+    <description>旧识中官及老僧，相看多怪往来曾。问君何事三千里，春谒长陵秋孝陵。</description>
+    <pubDate>Fri, 06 Oct 2017 11:11:30 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>Poem</category>
+  </item>
+
+    </channel>
+  </rss>

@@ -1,0 +1,44 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Tue, 12 Jul 2016 02:59:43 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/python/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/setup-supervisor-based-on-virtialenv</guid>
+    <title>配置基于 virtualenv 的 supervisor</title>
+    <link>https://armyja.cn/blog/setup-supervisor-based-on-virtialenv</link>
+    <description>supervisor 是基于 python 的任务管理工具，用来自动运行各种后台任务。virtualenv 是 python 的一个虚拟环境管理工具，用来部署运行不同的 python 版本。</description>
+    <pubDate>Tue, 12 Jul 2016 02:59:43 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>Python</category><category>Virtualenv</category><category>Supervisor</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/the-differences-between-xrange-and-range-in-python</guid>
+    <title>Python 中 xrange 和 range 的异同</title>
+    <link>https://armyja.cn/blog/the-differences-between-xrange-and-range-in-python</link>
+    <description>range 函数说明：range([start,] stop[, step])，根据 start 与 stop 指定的范围以及 step 设定的步长，生成一个序列。xrange 函数说明：用法与 range 完全相同，所不同的是生成的不是一个数组，而是一个生成器。</description>
+    <pubDate>Tue, 17 May 2016 09:38:00 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>Python</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/jian-dan-pa-chong-zhua-qu-tu-pian</guid>
+    <title>Python 爬虫：简单抓取图片</title>
+    <link>https://armyja.cn/blog/jian-dan-pa-chong-zhua-qu-tu-pian</link>
+    
+    <pubDate>Fri, 25 Mar 2016 12:20:28 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>Python</category>
+  </item>
+
+    </channel>
+  </rss>

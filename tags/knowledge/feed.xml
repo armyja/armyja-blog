@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Wed, 11 May 2016 05:08:02 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/knowledge/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/dynamic-tracing</guid>
+    <title>动态追踪技术漫谈</title>
+    <link>https://armyja.cn/blog/dynamic-tracing</link>
+    <description>动态追踪技术其实是一种后现代的高级调试技术。它可以帮助软件工程师以非常低的成本，在非常短的时间内，回答一些很难的关于软件系统方面的问题，从而更快速地排查和解决问题。</description>
+    <pubDate>Wed, 11 May 2016 05:08:02 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>Knowledge</category>
+  </item>
+
+    </channel>
+  </rss>

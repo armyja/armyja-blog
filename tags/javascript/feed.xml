@@ -1,0 +1,44 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Fri, 23 Mar 2018 07:31:43 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/javascript/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/create-shortcut-to-console-log</guid>
+    <title>console.log() 如何缩写为 log()</title>
+    <link>https://armyja.cn/blog/create-shortcut-to-console-log</link>
+    <description>使用 Function.prototype.bind 创建 console.log 语法糖</description>
+    <pubDate>Fri, 23 Mar 2018 07:31:43 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>JavaScript</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/12-extremely-useful-hacks-for-javascript</guid>
+    <title>12 个 JavaScript 技巧</title>
+    <link>https://armyja.cn/blog/12-extremely-useful-hacks-for-javascript</link>
+    <description>在这篇文章中将给大家分享12个有关于JavaScript的小技巧。这些小技巧可能在你的实际工作中或许能帮助你解决一些问题。</description>
+    <pubDate>Thu, 12 May 2016 15:39:59 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>JavaScript</category>
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/javascript-visual-sort</guid>
+    <title>JavaScript：可视化排序</title>
+    <link>https://armyja.cn/blog/javascript-visual-sort</link>
+    <description>十分艰难地做了这道百度前端学院的题目，因为展示效果挺赞就贴到博客上。代码命名混乱，冗余略多，木有对齐，注释特少。若看不太懂，请见谅。</description>
+    <pubDate>Fri, 08 Apr 2016 17:34:08 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>JavaScript</category>
+  </item>
+
+    </channel>
+  </rss>

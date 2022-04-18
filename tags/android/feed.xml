@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Armyja</title>
+      <link>https://armyja.cn/blog</link>
+      <description>酷爱蹦跶，穿梭堂狱</description>
+      <language>zh-CN</language>
+      <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
+      <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
+      <lastBuildDate>Sun, 10 Jul 2016 14:41:30 GMT</lastBuildDate>
+      <atom:link href="https://armyja.cn/tags/android/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://armyja.cn/blog/android-web-session</guid>
+    <title>Android 与 Web 服务器 在 Session 下通信</title>
+    <link>https://armyja.cn/blog/android-web-session</link>
+    <description>最近在开发项目的过程中，遇到android与web服务器要在同一session下通信的问题。</description>
+    <pubDate>Sun, 10 Jul 2016 14:41:30 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>Android</category>
+  </item>
+
+    </channel>
+  </rss>
