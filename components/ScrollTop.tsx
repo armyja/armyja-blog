@@ -9,7 +9,7 @@ const ScrollTop = () => {
     smoothscroll.polyfill()
     let scrollY = window.scrollY
     const handleWindowScroll = () => {
-      if (window.scrollY < scrollY && window.scrollY > 50) setShow(true)
+      if (window.scrollY > scrollY && window.scrollY > 50) setShow(true)
       else setShow(false)
       scrollY = window.scrollY
     }

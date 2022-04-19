@@ -21,11 +21,16 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
       else setShow(false)
     }
     const handleRouteChange = (url: string, { shallow }: { shallow: boolean }) => {
+      console.log('url', url)
+      console.log('shallow', shallow)
       setBlogTitle(window.document.querySelectorAll('article header h1')[0]?.textContent || '')
     }
+    console.log('bind')
     router.events.on('routeChangeComplete', handleRouteChange)
     title && window.addEventListener('scroll', handleWindowScroll)
     return () => {
+      console.log('unbind')
+
       router.events.off('routeChangeComplete', handleRouteChange)
       title && window.removeEventListener('scroll', handleWindowScroll)
     }
