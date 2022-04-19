@@ -14,25 +14,22 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   const [blogTitle, setBlogTitle] = useState('')
   const [show, setShow] = useState(false)
   useEffect(() => {
-    const title = window.document.querySelectorAll('article header h1')[0]?.textContent || ''
-    setBlogTitle(title)
+    setBlogTitle(window.document.querySelectorAll('article header h1')[0]?.textContent || '')
     const handleWindowScroll = () => {
-      if (window.scrollY > 130) setShow(true)
-      else setShow(false)
+      setShow(window.scrollY > 130)
     }
     const handleRouteChange = (url: string, { shallow }: { shallow: boolean }) => {
-      console.log('url', url)
-      console.log('shallow', shallow)
-      setBlogTitle(window.document.querySelectorAll('article header h1')[0]?.textContent || '')
+      if (url.startsWith('/blog/')) {
+        setBlogTitle(window.document.querySelectorAll('article header h1')[0]?.textContent || '')
+      } else {
+        setBlogTitle('')
+      }
     }
-    console.log('bind')
     router.events.on('routeChangeComplete', handleRouteChange)
-    title && window.addEventListener('scroll', handleWindowScroll)
+    window.addEventListener('scroll', handleWindowScroll)
     return () => {
-      console.log('unbind')
-
       router.events.off('routeChangeComplete', handleRouteChange)
-      title && window.removeEventListener('scroll', handleWindowScroll)
+      window.removeEventListener('scroll', handleWindowScroll)
     }
   }, [])
   const oneLineStyle: CSSProperties = {
