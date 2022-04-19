@@ -6,7 +6,7 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 // import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import { ReactNode, useEffect, useState } from 'react'
+import { CSSProperties, ReactNode, useEffect, useState } from 'react'
 import MobileNav from './MobileNav'
 import router from 'next/router'
 
@@ -17,7 +17,7 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
     const title = window.document.querySelectorAll('article header h1')[0]?.textContent || ''
     setBlogTitle(title)
     const handleWindowScroll = () => {
-      if (window.scrollY > 160) setShow(true)
+      if (window.scrollY > 130) setShow(true)
       else setShow(false)
     }
     const handleRouteChange = (url: string, { shallow }: { shallow: boolean }) => {
@@ -30,32 +30,34 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
       title && window.removeEventListener('scroll', handleWindowScroll)
     }
   }, [])
-  const oneLineStyle = {
+  const oneLineStyle: CSSProperties = {
     display: '-webkit-box',
-    '-webkit-line-clamp': '1',
-    '-webkit-box-orient': 'vertical',
+    WebkitLineClamp: '1',
+    WebkitBoxOrient: 'vertical',
     overflow: 'hidden',
   }
   return (
     <div className="h-screen">
-      <header className="fixed z-10 flex w-full items-center justify-between overflow-hidden bg-white/80 py-3 px-4 shadow-md shadow-black/5 backdrop-blur-sm dark:bg-gray-900/80 dark:shadow-slate-400/5">
-        <div className={`h-8 transition-transform ${blogTitle && show ? '-translate-y-14' : ''}`}>
-          <Link href="/" aria-label={siteMetadata.headerTitle}>
-            <div className="flex">
-              <div className="relative h-8 w-8">
-                <Logo />
-              </div>
-              {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="ml-2 mb-1 hidden text-2xl  font-medium sm:block">
-                  {siteMetadata.headerTitle}
+      <header className="fixed z-10 flex w-full items-center justify-between bg-white/80 py-3 px-4 shadow-md shadow-black/5 backdrop-blur-sm dark:bg-gray-900/80 dark:shadow-slate-400/5">
+        <div className="overflow-hidden">
+          <div className={`h-8 transition-transform ${blogTitle && show ? '-translate-y-14' : ''}`}>
+            <Link href="/" aria-label={siteMetadata.headerTitle}>
+              <div className="flex">
+                <div className="relative h-8 w-8">
+                  <Logo />
                 </div>
-              ) : (
-                siteMetadata.headerTitle
-              )}
+                {typeof siteMetadata.headerTitle === 'string' ? (
+                  <div className="ml-2 mb-1 hidden text-2xl  font-medium sm:block">
+                    {siteMetadata.headerTitle}
+                  </div>
+                ) : (
+                  siteMetadata.headerTitle
+                )}
+              </div>
+            </Link>
+            <div className="my-6 text-2xl font-medium sm:my-5" style={oneLineStyle}>
+              {blogTitle}
             </div>
-          </Link>
-          <div className="my-6 text-2xl font-medium sm:my-5" style={oneLineStyle}>
-            {blogTitle}
           </div>
         </div>
         <div className="z-0 flex shrink-0 items-center text-base leading-5">
