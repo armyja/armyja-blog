@@ -77,7 +77,7 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
         </div>
       </header>
       <SectionContainer>
-        <div className="flex flex-col justify-between pt-16">
+        <div className="flex min-h-full flex-col justify-between pt-16">
           <main className="mb-auto">{children}</main>
           <Footer />
         </div>
