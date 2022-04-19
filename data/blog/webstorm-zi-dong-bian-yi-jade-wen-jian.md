@@ -16,7 +16,7 @@ tags: WebStorm
 
     ### 在 WebStorm 上添加 File Watchers　　
     配置过程如下：
-    ![](https://armyja-pic.oss-cn-guangzhou.aliyuncs.com/content/images/2016/04/----_20160404125026.png)
+    ![](https://home.armyja.cn/content/images/2016/04/----_20160404125026.png)
     注意：
 
     - `jade.cmd` 的路径一般在 `C:\Users\user_name\AppData\Roaming\npm\jade.cmd` 。

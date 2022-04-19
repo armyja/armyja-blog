@@ -25,7 +25,7 @@ ps: 如果因为证书问题无法添加淘宝的源，可以试试
 
 在 WebStorm Settings 添加如下配置：
 
-![](https://armyja-pic.oss-cn-guangzhou.aliyuncs.com/content/images/2016/04/----_20160404123302.png)
+![](https://home.armyja.cn/content/images/2016/04/----_20160404123302.png)
 
 修改下面两个地方就可以一起生成'\*.map'文件：
 
@@ -43,7 +43,7 @@ ps: 如果因为证书问题无法添加淘宝的源，可以试试
 
     'Output paths to refresh': $FileNameWithoutExtension$.css:$FileNameWithoutExtension$.css.map
 
-![](https://armyja-pic.oss-cn-guangzhou.aliyuncs.com/content/images/2016/04/----_20160404124236.png)
+![](https://home.armyja.cn/content/images/2016/04/----_20160404124236.png)
 
 OK，修改完保存，现在新建 `style.scss` 后就会自动生成 `style.css` 和 `style.css.map` 啦。
 
@@ -135,5 +135,5 @@ OK，修改完保存，现在新建 `style.scss` 后就会自动生成 `style.cs
   text-decoration: underline;
 }
 
-参考链接：http: //www.w3cplus.com/sassguide/compile.html;; ;
+参考链接：http: //www.w3cplus.com/sassguide/compile.html;; ; ;
 ```

@@ -20,13 +20,13 @@ summary: f.lux 是一款根据时间变化来改变屏幕色温的软件。让�
     sudo apt-get install fluxgui
 
 打开软件 f.lux indicator applet
-![f.lux indicator applet](https://armyja-pic.oss-cn-guangzhou.aliyuncs.com/content/images/2017/01/-----2017-01-08-01-57-57.png)
+![f.lux indicator applet](https://home.armyja.cn/content/images/2017/01/-----2017-01-08-01-57-57.png)
 
-![f.lux Settings](https://armyja-pic.oss-cn-guangzhou.aliyuncs.com/content/images/2017/01/-----2017-01-08-02-06-56.png)
+![f.lux Settings](https://home.armyja.cn/content/images/2017/01/-----2017-01-08-02-06-56.png)
 
 在 [http://www.mapcoordinates.net/en](http://www.mapcoordinates.net/en) 查询并输入经纬度后，关闭窗口。(谷歌地图需翻墙查看)
 
-![Open f.lux](https://armyja-pic.oss-cn-guangzhou.aliyuncs.com/content/images/2017/01/-----2017-01-08-02-11-29.png)
+![Open f.lux](https://home.armyja.cn/content/images/2017/01/-----2017-01-08-02-11-29.png)
 
 在状态栏开启护眼模式。眼睛的舒适度大大提升！
 

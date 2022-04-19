@@ -7,7 +7,7 @@ summary: 进入 Settings-Editor，设置编码为 UTF-8。进入 Settings-Compil
 ---
 
 进入 Settings-Editor，设置编码为 UTF-8：
-![编辑器设置编码为 UTF-8](https://armyja-pic.oss-cn-guangzhou.aliyuncs.com/content/images/2017/12/Snipaste_2017-12-04_19-58-28.png)
+![编辑器设置编码为 UTF-8](https://home.armyja.cn/content/images/2017/12/Snipaste_2017-12-04_19-58-28.png)
 
 进入 Settings-Compiler 和 Settings-Debugger，设置编译参数为：
 
@@ -16,6 +16,6 @@ summary: 进入 Settings-Editor，设置编码为 UTF-8。进入 Settings-Compil
     -fexec-charset=GBK
 ```
 
-![设置 Release 模式编译参数](https://armyja-pic.oss-cn-guangzhou.aliyuncs.com/content/images/2017/12/Snipaste_2017-12-04_20-03-11.png)
-![设置 Debug 模式编译参数](https://armyja-pic.oss-cn-guangzhou.aliyuncs.com/content/images/2017/12/Snipaste_2017-12-04_20-04-13.png)
+![设置 Release 模式编译参数](https://home.armyja.cn/content/images/2017/12/Snipaste_2017-12-04_20-03-11.png)
+![设置 Debug 模式编译参数](https://home.armyja.cn/content/images/2017/12/Snipaste_2017-12-04_20-04-13.png)
 参考链接：[Code：Blocks 中文乱码问题原因分析和解决方法！](http://blog.csdn.net/softman11/article/details/6121538)
