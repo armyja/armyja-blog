@@ -11,13 +11,13 @@ summary: 在做批量实验室，例如跑批量 MR 的作业，我们会写好 
 在做批量实验室，例如跑批量 MR 的作业，我们会写好 shell 脚本，然后启动脚本，等所有作业执行完再去看结果，但是这些执行时的信息如何保存下来到文件中呢？下面这个命令可以完成这个任务。
 
 ```bash
-    sh batchjob.sh 2>&1 | tee mylog.log
+sh batchjob.sh 2>&1 | tee mylog.log
 ```
 
 C++ 程序也可如法炮制。
 
 ```bash
-    ./a.out 2>&1 | tee a.out.log
+./a.out 2>&1 | tee a.out.log
 ```
 
 其中 `sh batchjob.sh`：表示要执行的 shell 脚本；0，1，2：在 `linux` 分别表示标准输入、标准输出和标准错误信息输出。
@@ -52,21 +52,21 @@ C++ 程序也可如法炮制。
 tee 指令会从标准输入设备读取数据，将其内容输出到标准输出设备，同时保存成文件。
 
 ```bash
-    $ tee --help
-    Usage: tee [OPTION]... [FILE]...
-    Copy standard input to each FILE, and also to standard output.
+$ tee --help
+Usage: tee [OPTION]... [FILE]...
+Copy standard input to each FILE, and also to standard output.
 
-      -a, --append              append to the given FILEs, do not overwrite
-      -i, --ignore-interrupts   ignore interrupt signals
-          --help     display this help and exit
-          --version  output version information and exit
+    -a, --append              append to the given FILEs, do not overwrite
+    -i, --ignore-interrupts   ignore interrupt signals
+        --help     display this help and exit
+        --version  output version information and exit
 
-    If a FILE is -, copy again to standard output.
+If a FILE is -, copy again to standard output.
 
-    Report tee bugs to bug-coreutils@gnu.org
-    GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
-    General help using GNU software: <http://www.gnu.org/gethelp/>
-    For complete documentation, run: info coreutils 'tee invocation'
+Report tee bugs to bug-coreutils@gnu.org
+GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+General help using GNU software: <http://www.gnu.org/gethelp/>
+For complete documentation, run: info coreutils 'tee invocation'
 ```
 
 转载自：[http://www.cnblogs.com/gslyyq/](http://www.cnblogs.com/gslyyq/)

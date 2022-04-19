@@ -27,8 +27,8 @@ chown 命令的用途很多，还可以顺便直接修改用户组的名称。�
 #### 基本语法
 
 ```bash
-    chown [-R] 账号名称 文件或目录
-    chown [-R] 账号名称: 用户组名称 文件或目录
+chown [-R] 账号名称 文件或目录
+chown [-R] 账号名称: 用户组名称 文件或目录
 ```
 
 #### 参数
@@ -40,23 +40,23 @@ chown 命令的用途很多，还可以顺便直接修改用户组的名称。�
 ##### 示例 1
 
 ```bash
-    [root@localhost home]$ touch testfile // 由 root 用户创建文件
-    [root@localhost home]$ ls testfile –l
-    -rw--w--w- 1 root root 0 Jun 7 19:35 testfile // 文件的拥有者及拥有者级均为 root
-    [root@localhost home]$ chown yangzongde testfile // 修改文件拥有者为 yangzongde
-    [root@localhost home]$ ls testfile -l
-    -rw--w--w- 1 yangzongde root 0 Jun 7 19:35 testfile // 查看文件拥有者为 yangzongde，但组仍为 root
+[root@localhost home]$ touch testfile // 由 root 用户创建文件
+[root@localhost home]$ ls testfile –l
+-rw--w--w- 1 root root 0 Jun 7 19:35 testfile // 文件的拥有者及拥有者级均为 root
+[root@localhost home]$ chown yangzongde testfile // 修改文件拥有者为 yangzongde
+[root@localhost home]$ ls testfile -l
+-rw--w--w- 1 yangzongde root 0 Jun 7 19:35 testfile // 查看文件拥有者为 yangzongde，但组仍为 root
 ```
 
 ##### 示例 2
 
 ```bash
-    chown bin install.log
-    ls -l
-    -rw-r--r--  1 bin  users 68495 Jun 25 08:53 install.log
-    chown root:root install.log
-    ls -l
-    -rw-r--r--  1 root root 68495 Jun 25 08:53 install.log
+chown bin install.log
+ls -l
+-rw-r--r--  1 bin  users 68495 Jun 25 08:53 install.log
+chown root:root install.log
+ls -l
+-rw-r--r--  1 root root 68495 Jun 25 08:53 install.log
 ```
 
 ### 三、使用 chgrp 命令更改文件所属用户组
@@ -75,30 +75,30 @@ chown 命令的用途很多，还可以顺便直接修改用户组的名称。�
 ##### 示例 3
 
 ```bash
-    [root@localhost home]$ ls testfile -l
-    -rw--w--w- 1 yangzongde root 0 Jun 7 19:35 testfile // 查看文件拥有者为 yangzongde，但组为 root
-    [root@localhost home]$ chgrp yangzongde testfile // 修改拥有者组为 yangzongde
-    [root@localhost home]$ ls testfile -l
-    -rw--w--w- 1 yangzongde yangzongde 0 Jun 7 19:35 testfile
-    [root@localhost home]$ chown root:root testfile // 使用 chown 一次性修改拥有者及组
-    [root@localhost home]$ ls testfile -l
-    -rw--w--w- 1 root root 0 Jun 7 19:35 testfile
+[root@localhost home]$ ls testfile -l
+-rw--w--w- 1 yangzongde root 0 Jun 7 19:35 testfile // 查看文件拥有者为 yangzongde，但组为 root
+[root@localhost home]$ chgrp yangzongde testfile // 修改拥有者组为 yangzongde
+[root@localhost home]$ ls testfile -l
+-rw--w--w- 1 yangzongde yangzongde 0 Jun 7 19:35 testfile
+[root@localhost home]$ chown root:root testfile // 使用 chown 一次性修改拥有者及组
+[root@localhost home]$ ls testfile -l
+-rw--w--w- 1 root root 0 Jun 7 19:35 testfile
 ```
 
 ##### 示例 4
 
 ```bash
-    [root@linux ~]$ chgrp users install.log
-    [root@linux ~]$ ls -l
-    -rw-r--r--  1 root users 68495 Jun 25 08:53 install.log
+[root@linux ~]$ chgrp users install.log
+[root@linux ~]$ ls -l
+-rw-r--r--  1 root users 68495 Jun 25 08:53 install.log
 ```
 
 ##### 示例 5
 
 ```bash
-    更改为一个 /etc/group 里不存在的用户组
-    [root@linux ~]$ chgrp testing install.log
-    chgrp: invalid group name `testing' <== 出现错误信息～找不到这个用户组名～
+更改为一个 /etc/group 里不存在的用户组
+[root@linux ~]$ chgrp testing install.log
+chgrp: invalid group name `testing' <== 出现错误信息～找不到这个用户组名～
 ```
 
 本文节选自：[http://blog.csdn.net/hudashi/article/details/7797393](http://blog.csdn.net/hudashi/article/details/7797393)

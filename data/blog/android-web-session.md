@@ -59,26 +59,26 @@ Tomcat 对 Session 的实现，是一开始同时使用 Cookie 和 URL 回写机
 获取 Cookie：
 
 ```java
-    URL url = new URL(requrl);<br>
-    HttpURLConnection con= (HttpURLConnection) url.openConnection(); <br>
-    // 取得sessionid. <br>
-    String cookieval = con.getHeaderField(&quot;set-cookie&quot;); <br>
-    String sessionid; <br>
-    if(cookieval != null) { <br>
-    sessionid = cookieval.substring(0, cookieval.indexOf(&quot;;&quot;)); <br>
-    }
+URL url = new URL(requrl);<br>
+HttpURLConnection con= (HttpURLConnection) url.openConnection(); <br>
+// 取得sessionid. <br>
+String cookieval = con.getHeaderField(&quot;set-cookie&quot;); <br>
+String sessionid; <br>
+if(cookieval != null) { <br>
+sessionid = cookieval.substring(0, cookieval.indexOf(&quot;;&quot;)); <br>
+}
 
-    //sessionid&#20540;&#26684;式：JSESSIONID=AD5F5C9EEB16C71EC3725DBF209F6178，是键&#20540;对，不是单指&#20540;
+//sessionid&#20540;&#26684;式：JSESSIONID=AD5F5C9EEB16C71EC3725DBF209F6178，是键&#20540;对，不是单指&#20540;
 ```
 
 发送设置 cookie：
 
 ```java
-    URL url = new URL(requrl);<br>
-    HttpURLConnectioncon= (HttpURLConnection) url.openConnection(); <br>
-    if(sessionid != null) { <br>
-    con.setRequestProperty(&quot;cookie&quot;, sessionid); <br>
-    }
+URL url = new URL(requrl);<br>
+HttpURLConnectioncon= (HttpURLConnection) url.openConnection(); <br>
+if(sessionid != null) { <br>
+con.setRequestProperty(&quot;cookie&quot;, sessionid); <br>
+}
 ```
 
 只要设置了 sessionID，这样 web 服务器在接受请求的时候就会自动搜索对应的 session 了，从而保证了在同一会话 Session。

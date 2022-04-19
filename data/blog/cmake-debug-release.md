@@ -10,14 +10,14 @@ tags: C++, CMake
 在 `CMake` 中编译 debug 模式，在 `CMakeLists.txt` 中添加如下两行：
 
 ```bash
-    SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb ")
-    SET(CMAKE_CXX_FLAGS_RELEASE "${ENV{CXXFLAGS} -O3 -Wall")
+SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb ")
+SET(CMAKE_CXX_FLAGS_RELEASE "${ENV{CXXFLAGS} -O3 -Wall")
 ```
 
 然后，在编译的时候，使用如下命令（Debug / Release 选其一）：
 
 ```bash
-    cmake -DCMAKE_BUILD_TYPE=Debug/Release  path
+cmake -DCMAKE_BUILD_TYPE=Debug/Release  path
 ```
 
 第三个参数 `path` 是指项目的顶层路径。

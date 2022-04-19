@@ -10,18 +10,18 @@ summary: 在我们讨论宽度的时候，我们应该讲下与它相关的一�
 
 在我们讨论宽度的时候，我们应该讲下与它相关的一个重点知识：盒模型。当你设置了元素的宽度，实际展现的元素却能够超出你的设置：因为元素的边框和内边距会撑开元素。看下面的例子，两个相同宽度的元素显示的实际宽度却不一样。
 
-```javascript
-    .simple {
-      width: 150px;
-      margin: 20px auto;
-    }
+```css
+.simple {
+  width: 150px;
+  margin: 20px auto;
+}
 
-    .fancy {
-      width: 150px;
-      margin: 20px auto;
-      padding: 50px;
-      border-width: 10px;
-    }
+.fancy {
+  width: 150px;
+  margin: 20px auto;
+  padding: 50px;
+  border-width: 10px;
+}
 ```
 
 simple：我小一些...
@@ -32,24 +32,24 @@ fancy：我比它大！
 
 经过了一代又一代人们意识到数学不好玩，所以他们新增了一个叫做 `box-sizing` 的 CSS 属性。当你设置一个元素为 `box-sizing: border-box;` 时，此元素的内边距和边框不再会增加它的宽度。这里有一个与前一页相同的例子，唯一的区别是两个元素都设置了 `box-sizing: border-box;` ：
 
-```javascript
-    .simple {
-      width: 250px;
-      margin: 20px auto;
-      -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-              box-sizing: border-box;
-    }
+```css
+.simple {
+  width: 250px;
+  margin: 20px auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-    .fancy {
-      width: 250px;
-      margin: 20px auto;
-      padding: 50px;
-      border: solid blue 10px;
-      -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-              box-sizing: border-box;
-    }
+.fancy {
+  width: 250px;
+  margin: 20px auto;
+  padding: 50px;
+  border: solid blue 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 ```
 
 simple：我们现在一样大小了！
@@ -58,12 +58,12 @@ fancy：万岁！
 
 既然没有比这更好的方法，一些 CSS 开发者想要页面上所有的元素都有如此表现。所以开发者们把以下 CSS 代码放在他们页面上：
 
-```javascript
-    * {
-      -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-              box-sizing: border-box;
-    }
+```css
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 ```
 
 这样可以确保所有的元素都会用这种更直观的方式排版。

@@ -13,11 +13,15 @@ tags: WebStorm, CSS
 
 ps: 如果因为证书问题无法添加淘宝的源，可以试试
 
-    $ gem source -a https://gems.ruby-china.org
+```bash
+$ gem source -a https://gems.ruby-china.org
+```
 
 或者
 
-    $ gem source -a http://gems.ruby-china.org
+```bash
+$ gem source -a http://gems.ruby-china.org
+```
 
 虽然不清楚使用 http 协议有什么弊端 ... 总之能安装上 sass 就好 ~
 
@@ -29,19 +33,27 @@ ps: 如果因为证书问题无法添加淘宝的源，可以试试
 
 修改下面两个地方就可以一起生成'\*.map'文件：
 
-    'Arguments': --no-cache --update $FileName$:$FileNameWithoutExtension$.css
+```
+'Arguments': --no-cache --update $FileName$:$FileNameWithoutExtension$.css
+```
 
 修改后：
 
-    'Arguments': --no-cache --update --sourcemap --watch $FileName$:$FileNameWithoutExtension$.css
+```
+'Arguments': --no-cache --update --sourcemap --watch $FileName$:$FileNameWithoutExtension$.css
+```
 
 另一处：
 
-    'Output paths to refresh': $FileNameWithoutExtension$.css
+```
+'Output paths to refresh': $FileNameWithoutExtension$.css
+```
 
 修改后：
 
-    'Output paths to refresh': $FileNameWithoutExtension$.css:$FileNameWithoutExtension$.css.map
+```
+'Output paths to refresh': $FileNameWithoutExtension$.css:$FileNameWithoutExtension$.css.map
+```
 
 ![](https://home.armyja.cn/content/images/2016/04/----_20160404124236.png)
 
@@ -51,15 +63,18 @@ OK，修改完保存，现在新建 `style.scss` 后就会自动生成 `style.cs
 
 运行命令行帮助文档，可以获得所有的配置选项
 
-    sass -h
+```
+sass -h
 
 我们一般常用的有 `--style`，`--sourcemap`。
+```
 
-    sass --watch style.scss:style.css --style compact
-    sass --watch style.scss:style.css --sourcemap
-    sass --watch style.scss:style.css --style expanded --sourcemap
-    sass --watch style.scss:style.css --debug-info
+sass --watch style.scss:style.css --style compact
+sass --watch style.scss:style.css --sourcemap
+sass --watch style.scss:style.css --style expanded --sourcemap
+sass --watch style.scss:style.css --debug-info
 
+````
 - `--style` 表示解析后的 css 是什么格式，有四种取值分别为：`nested`，`expanded`，`compact`，`compressed`。
 - `--sourcemap` 表示开启 sourcemap 调试。开启 sourcemap 调试后，会生成一个后缀名为 `.css.map` 文件。
 
@@ -135,5 +150,6 @@ OK，修改完保存，现在新建 `style.scss` 后就会自动生成 `style.cs
   text-decoration: underline;
 }
 
-参考链接：http: //www.w3cplus.com/sassguide/compile.html;; ; ;
-```
+````
+
+参考链接：http: //www.w3cplus.com/sassguide/compile.html

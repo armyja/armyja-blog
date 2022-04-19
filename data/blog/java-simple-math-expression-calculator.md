@@ -37,99 +37,99 @@ c 如果 x 不为"("或者")"：
 使用栈进行解析。
 
 ```java
-    package Calculator;
-    import java.util.Stack;
-    /**
-     * Created by jeffrey on 16-9-26.
-     */
-    public class Calculator {
-        public static double Cal(String Exp) {
-            Stack operator = new Stack(); // 运算符栈
-            Stack operand = new Stack(); // 结果临时栈
-            int index = 0; // 字符串索引；
-            String op = ""; // 存放内容
-            // 将 Exp 按照顺序压入栈中
-            while (index < Exp.length()) {
-                boolean flag = false;
-                op += Exp.charAt(index);
-                // 运算符或者括号入栈
-                    switch (op) {
-                        case "+":
-                        case "-":
-                            if (!operator.isEmpty()&&!operator.peek().equals("(") ) {
-                                Pop(operand, operator);
-                            }
-                            operator.push(op);
-                            op = "";
-                            break;
-                        case "*":
-                        case "/":
-                            if (operator.peek().equals("*")||operator.peek().equals("/")){
-                                Pop(operand, operator);
-                            }
-                            operator.push(op);
-                            op = "";
-                            break;
-                        case "(":
-                            operator.push("(");
-                            op = "";
-                            break;
-                        case  ")":
-                            while(!operator.peek().equals("("))
+package Calculator;
+import java.util.Stack;
+/**
+ * Created by jeffrey on 16-9-26.
+ */
+public class Calculator {
+    public static double Cal(String Exp) {
+        Stack operator = new Stack(); // 运算符栈
+        Stack operand = new Stack(); // 结果临时栈
+        int index = 0; // 字符串索引；
+        String op = ""; // 存放内容
+        // 将 Exp 按照顺序压入栈中
+        while (index < Exp.length()) {
+            boolean flag = false;
+            op += Exp.charAt(index);
+            // 运算符或者括号入栈
+                switch (op) {
+                    case "+":
+                    case "-":
+                        if (!operator.isEmpty()&&!operator.peek().equals("(") ) {
                             Pop(operand, operator);
-                            operator.pop();
-                            op = "";
-                            break;
-                        default:
-                            flag = true;
-
-                    }
-                if(flag){
-                    // 最后一个符号
-                    if (index == Exp.length() - 1) {
-                        operand.push(op);
-                        while(!operator.isEmpty()){
-                            Pop(operand,operator);
                         }
+                        operator.push(op);
                         op = "";
-                    }
-                    // 下一个字符非数字且非小数点，说明 op 是完整的操作数
-                    else if (!Character.isDigit(Exp.charAt(index + 1)) && Exp.charAt(index + 1) != '.') {
-                        operand.push(op);
+                        break;
+                    case "*":
+                    case "/":
+                        if (operator.peek().equals("*")||operator.peek().equals("/")){
+                            Pop(operand, operator);
+                        }
+                        operator.push(op);
                         op = "";
-                    }
+                        break;
+                    case "(":
+                        operator.push("(");
+                        op = "";
+                        break;
+                    case  ")":
+                        while(!operator.peek().equals("("))
+                        Pop(operand, operator);
+                        operator.pop();
+                        op = "";
+                        break;
+                    default:
+                        flag = true;
+
                 }
-                index++;
+            if(flag){
+                // 最后一个符号
+                if (index == Exp.length() - 1) {
+                    operand.push(op);
+                    while(!operator.isEmpty()){
+                        Pop(operand,operator);
+                    }
+                    op = "";
+                }
+                // 下一个字符非数字且非小数点，说明 op 是完整的操作数
+                else if (!Character.isDigit(Exp.charAt(index + 1)) && Exp.charAt(index + 1) != '.') {
+                    operand.push(op);
+                    op = "";
+                }
             }
-            // 对没有括号的
-            while(!operator.isEmpty()){
-                Pop(operand,operator);
-            }
-            return Double.valueOf(operand.peek().toString());
+            index++;
         }
-        private static void Pop(Stack operand, Stack operator) {
-            double p2 = Double.valueOf(operand.pop().toString());
-            double p1 = Double.valueOf(operand.pop().toString());
-            switch (operator.pop().toString()) {
-                case "+":
-                    operand.push(String.valueOf(p1 + p2));
-                    break;
-                case "-":
-                    operand.push(String.valueOf(p1 - p2));
-                    break;
-                case "/":
-                    operand.push(String.valueOf(p1 / p2));
-                    break;
-                case "*":
-                    operand.push(String.valueOf(p1 * p2));
-                    break;
-            }
+        // 对没有括号的
+        while(!operator.isEmpty()){
+            Pop(operand,operator);
         }
-        public static void main(String[] args){
-            double ret = Calculator.Cal("3+0.5*(5*(6+6*9+16))");
-            System.out.println(ret);
+        return Double.valueOf(operand.peek().toString());
+    }
+    private static void Pop(Stack operand, Stack operator) {
+        double p2 = Double.valueOf(operand.pop().toString());
+        double p1 = Double.valueOf(operand.pop().toString());
+        switch (operator.pop().toString()) {
+            case "+":
+                operand.push(String.valueOf(p1 + p2));
+                break;
+            case "-":
+                operand.push(String.valueOf(p1 - p2));
+                break;
+            case "/":
+                operand.push(String.valueOf(p1 / p2));
+                break;
+            case "*":
+                operand.push(String.valueOf(p1 * p2));
+                break;
         }
     }
+    public static void main(String[] args){
+        double ret = Calculator.Cal("3+0.5*(5*(6+6*9+16))");
+        System.out.println(ret);
+    }
+}
 ```
 
 参考链接：[https://www.jianshu.com/p/e1147797c11a](https://www.jianshu.com/p/e1147797c11a)

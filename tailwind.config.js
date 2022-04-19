@@ -35,6 +35,7 @@ module.exports = {
           css: {
             color: theme('colors.gray.700'),
             a: {
+              'word-break': 'break-word',
               color: theme('colors.primary.500'),
               '&:hover': {
                 color: `${theme('colors.primary.600')} !important`,
@@ -42,16 +43,19 @@ module.exports = {
               code: { color: theme('colors.primary.400') },
             },
             h1: {
+              fontSize: theme('fontSize.2xl'),
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
             },
             h2: {
+              fontSize: theme('fontSize.xl'),
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
             },
             h3: {
+              fontSize: theme('fontSize.lg'),
               fontWeight: '600',
               color: theme('colors.gray.900'),
             },

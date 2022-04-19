@@ -15,13 +15,13 @@ tags: Ghost
 2. 在 `$document.ready()` 中加入：
 
 ```javascript
-    $('a').on('click', function(e) {
-    var url = $(this).attr('href').toUpperCase();
-    if (url.indexOf("ARMYJA.CN") < 0 & url.indexOf("HTTP") >= 0 ) {
-    $(this).attr("target","_blank");
-    }
-    });
-    <!--将其中的 `ARMYJA.CN` 改为自己的博客域名-->
+$('a').on('click', function(e) {
+var url = $(this).attr('href').toUpperCase();
+if (url.indexOf("ARMYJA.CN") < 0 & url.indexOf("HTTP") >= 0 ) {
+$(this).attr("target","_blank");
+}
+});
+<!--将其中的 `ARMYJA.CN` 改为自己的博客域名-->
 ```
 
 1. 重启 Ghost 服务器，搞定 ~

@@ -6,50 +6,81 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 // import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import MobileNav from './MobileNav'
+import router from 'next/router'
 
 const LayoutWrapper = ({ children }: { children: ReactNode }) => {
+  const [blogTitle, setBlogTitle] = useState('')
+  const [show, setShow] = useState(false)
+  useEffect(() => {
+    const title = window.document.querySelectorAll('article header h1')[0]?.textContent || ''
+    setBlogTitle(title)
+    const handleWindowScroll = () => {
+      if (window.scrollY > 160) setShow(true)
+      else setShow(false)
+    }
+    const handleRouteChange = (url: string, { shallow }: { shallow: boolean }) => {
+      setBlogTitle(window.document.querySelectorAll('article header h1')[0]?.textContent || '')
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    title && window.addEventListener('scroll', handleWindowScroll)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+      title && window.removeEventListener('scroll', handleWindowScroll)
+    }
+  }, [])
+  const oneLineStyle = {
+    display: '-webkit-box',
+    '-webkit-line-clamp': '1',
+    '-webkit-box-orient': 'vertical',
+    overflow: 'hidden',
+  }
   return (
-    <SectionContainer>
-      <div className="flex h-screen flex-col justify-between">
-        <header className="flex items-center justify-between py-10">
-          <div>
-            <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-between">
-                <div className="relative mt-2 mr-3 h-8 w-8">
-                  <Logo />
-                </div>
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
-                  </div>
-                ) : (
-                  siteMetadata.headerTitle
-                )}
+    <div className="h-screen">
+      <header className="fixed z-10 flex w-full items-center justify-between overflow-hidden bg-white/80 py-3 px-4 shadow-md shadow-black/5 backdrop-blur-sm dark:bg-gray-900/80 dark:shadow-slate-400/5">
+        <div className={`h-8 transition-transform ${blogTitle && show ? '-translate-y-14' : ''}`}>
+          <Link href="/" aria-label={siteMetadata.headerTitle}>
+            <div className="flex">
+              <div className="relative h-8 w-8">
+                <Logo />
               </div>
-            </Link>
-          </div>
-          <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:block">
-              {headerNavLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
-                >
-                  {link.title}
-                </Link>
-              ))}
+              {typeof siteMetadata.headerTitle === 'string' ? (
+                <div className="ml-2 mb-1 hidden text-2xl  font-medium sm:block">
+                  {siteMetadata.headerTitle}
+                </div>
+              ) : (
+                siteMetadata.headerTitle
+              )}
             </div>
-            <ThemeSwitch />
-            <MobileNav />
+          </Link>
+          <div className="my-6 text-2xl font-medium sm:my-5" style={oneLineStyle}>
+            {blogTitle}
           </div>
-        </header>
-        <main className="mb-auto">{children}</main>
-        <Footer />
-      </div>
-    </SectionContainer>
+        </div>
+        <div className="z-0 flex shrink-0 items-center text-base leading-5">
+          <div className="hidden sm:block">
+            {headerNavLinks.map((link) => (
+              <Link
+                key={link.title}
+                href={link.href}
+                className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
+          <ThemeSwitch />
+          <MobileNav />
+        </div>
+      </header>
+      <SectionContainer>
+        <div className="flex flex-col justify-between pt-16">
+          <main className="mb-auto">{children}</main>
+          <Footer />
+        </div>
+      </SectionContainer>
+    </div>
   )
 }
 

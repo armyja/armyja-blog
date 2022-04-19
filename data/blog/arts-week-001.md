@@ -42,56 +42,56 @@ tags: ARTS
 ## 初步解法
 
 ```java
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     *     int val;
-     *     ListNode next;
-     *     ListNode(int x) { val = x; }
-     * }
-     */
-    class Solution {
-        public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-            ListNode i1 = l1;
-            ListNode i2 = l2;
-            ListNode p = new ListNode(0);
-            ListNode result = p;
-            int carryBit = 0;
-            int ret = 0;
-            while (i1 != null || i2 != null) {
-                if (i1 != null && i2 != null) {
-                    ret = i1.val + i2.val + carryBit;
-                    carryBit = ret / 10;
-                    result.val = ret % 10;
-                } else if (i1 != null && i2 == null) {
-                    ret = i1.val + carryBit;
-                    carryBit = ret / 10;
-                    result.val = ret % 10;
-                } else if (i1 == null && i2 != null) {
-                    ret = i2.val + carryBit;
-                    carryBit = ret / 10;
-                    result.val = ret % 10;
-                }
-                if ((i1 != null && i1.next != null) ||
-                    (i2 != null && i2.next != null)) {
-                    result.next = new ListNode(0);
-                    result = result.next;
-                } else {
-                    if (carryBit == 1) {
-                        result.next = new ListNode(1);
-                    }
-                    break;
-                }
-                if (i1 != null) {
-                    i1 = i1.next;
-                }
-                if (i2 != null) {
-                    i2 = i2.next;
-                }
-            }
-            return p;
-        }
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+ListNode i1 = l1;
+ListNode i2 = l2;
+ListNode p = new ListNode(0);
+ListNode result = p;
+int carryBit = 0;
+int ret = 0;
+while (i1 != null || i2 != null) {
+if (i1 != null && i2 != null) {
+    ret = i1.val + i2.val + carryBit;
+    carryBit = ret / 10;
+    result.val = ret % 10;
+} else if (i1 != null && i2 == null) {
+    ret = i1.val + carryBit;
+    carryBit = ret / 10;
+    result.val = ret % 10;
+} else if (i1 == null && i2 != null) {
+    ret = i2.val + carryBit;
+    carryBit = ret / 10;
+    result.val = ret % 10;
+}
+if ((i1 != null && i1.next != null) ||
+    (i2 != null && i2.next != null)) {
+    result.next = new ListNode(0);
+    result = result.next;
+} else {
+    if (carryBit == 1) {
+        result.next = new ListNode(1);
     }
+    break;
+}
+if (i1 != null) {
+    i1 = i1.next;
+}
+if (i2 != null) {
+    i2 = i2.next;
+}
+}
+return p;
+}
+}
 ```
 
 ## 提交记录
@@ -106,25 +106,25 @@ tags: ARTS
 优化解法：[方法：初等数学](https://leetcode-cn.com/problems/add-two-numbers/solution/liang-shu-xiang-jia-by-leetcode)，代码如下：
 
 ```java
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode dummyHead = new ListNode(0);
-        ListNode p = l1, q = l2, curr = dummyHead;
-        int carry = 0;
-        while (p != null || q != null) {
-            int x = (p != null) ? p.val : 0;
-            int y = (q != null) ? q.val : 0;
-            int sum = carry + x + y;
-            carry = sum / 10;
-            curr.next = new ListNode(sum % 10);
-            curr = curr.next;
-            if (p != null) p = p.next;
-            if (q != null) q = q.next;
-        }
-        if (carry > 0) {
-            curr.next = new ListNode(carry);
-        }
-        return dummyHead.next;
+public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    ListNode dummyHead = new ListNode(0);
+    ListNode p = l1, q = l2, curr = dummyHead;
+    int carry = 0;
+    while (p != null || q != null) {
+        int x = (p != null) ? p.val : 0;
+        int y = (q != null) ? q.val : 0;
+        int sum = carry + x + y;
+        carry = sum / 10;
+        curr.next = new ListNode(sum % 10);
+        curr = curr.next;
+        if (p != null) p = p.next;
+        if (q != null) q = q.next;
     }
+    if (carry > 0) {
+        curr.next = new ListNode(carry);
+    }
+    return dummyHead.next;
+}
 ```
 
 代码重构思路：

@@ -7,7 +7,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 // TODO 评论系统
 // import Comments from '@/components/comments'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import ScrollTop from '@/components/ScrollTop'
 import { Author, Blog, BlogSEOProp } from '@/lib/types'
 import { ReactNode } from 'react'
 
@@ -42,13 +42,13 @@ export default function PostLayout({
   const { slug, fileName, date_published, title, tags } = frontMatter
 
   return (
-    <SectionContainer>
+    <>
       <BlogSEO
         url={`${siteMetadata.siteUrl}/blog/${slug}`}
         authorDetails={authorDetails}
         {...frontMatter}
       />
-      <ScrollTopAndComment />
+      <ScrollTop />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
@@ -75,7 +75,7 @@ export default function PostLayout({
             className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <dl className="pt-6 pb-10 xl:border-b xl:border-gray-200 xl:pt-11 xl:dark:border-gray-700">
+            <dl className="py-4 xl:border-b xl:border-gray-200 xl:pt-11 xl:dark:border-gray-700">
               <dt className="sr-only">Authors</dt>
               <dd>
                 <ul className="flex justify-center space-x-8 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8">
@@ -172,6 +172,6 @@ export default function PostLayout({
           </div>
         </div>
       </article>
-    </SectionContainer>
+    </>
   )
 }

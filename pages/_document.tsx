@@ -31,8 +31,8 @@ class MyDocument extends Document {
           <meta name="application-name" content="如若不燃" />
           <meta name="apple-mobile-web-app-title" content="如若不燃" />
           <meta name="msapplication-tooltip" content="如若不燃" />
-          <meta name="theme-color" content="#27ae60" />
-          <meta name="msapplication-navbutton-color" content="#27ae60" />
+          <meta name="theme-color" content="#FFFFFF" />
+          <meta name="msapplication-navbutton-color" content="#FFFFFF" />
           <meta name="msapplication-starturl" content="/" />
         </Head>
         <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">

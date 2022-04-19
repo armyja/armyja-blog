@@ -11,13 +11,13 @@ summary: Make an Atom Package List and install the given Atom package from `my-p
 Make an Atom Package List.
 
 ```bash
-    $ apm list --installed --bare > my-packages.txt
+$ apm list --installed --bare > my-packages.txt
 ```
 
 Install the given Atom package from `my-packages.txt` to `~/.atom/packages/<package_name>` .
 
 ```bash
-    $ apm install --packages-file my-packages.txt
+$ apm install --packages-file my-packages.txt
 ```
 
 Thanks to: [How can I make the package list portable?](https://discuss.atom.io/t/how-can-i-make-the-package-list-portable/12433)

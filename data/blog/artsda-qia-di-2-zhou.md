@@ -93,57 +93,57 @@ date_updated: 2019-08-26T12:32:36.000Z
 此时的 P [ i ] 求出来将会是 3，P [ i ] 对应的右边界将是 10 + 3 = 13，所以大于当前的 R，我们需要把 C 更新成 i 的值，也就是 10，R 更新成 13。继续下边的循环。
 
 ```java
-    public String preProcess(String s) {
-        int n = s.length();
-        if (n == 0) {
-            return "^$";
+public String preProcess(String s) {
+    int n = s.length();
+    if (n == 0) {
+        return "^$";
+    }
+    String ret = "^";
+    for (int i = 0; i &lt; n; i++)
+        ret += "#" + s.charAt(i);
+    ret += "#$";
+    return ret;
+}
+
+// 马拉车算法
+public String longestPalindrome2(String s) {
+    String T = preProcess(s);
+    int n = T.length();
+    int[] P = new int[n];
+    int C = 0, R = 0;
+    for (int i = 1; i &lt; n - 1; i++) {
+        int i_mirror = 2 * C - i;
+        if (R &gt; i) {
+            P[i] = Math.min(R - i, P[i_mirror]);// 防止超出 R
+        } else {
+            P[i] = 0;// 等于 R 的情况
         }
-        String ret = "^";
-        for (int i = 0; i &lt; n; i++)
-            ret += "#" + s.charAt(i);
-        ret += "#$";
-        return ret;
+
+        // 碰到之前讲的三种情况时候，需要利用中心扩展法
+        while (T.charAt(i + 1 + P[i]) == T.charAt(i - 1 - P[i])) {
+            P[i]++;
+        }
+
+        // 判断是否需要更新 R
+        if (i + P[i] &gt; R) {
+            C = i;
+            R = i + P[i];
+        }
+
     }
 
-    // 马拉车算法
-    public String longestPalindrome2(String s) {
-        String T = preProcess(s);
-        int n = T.length();
-        int[] P = new int[n];
-        int C = 0, R = 0;
-        for (int i = 1; i &lt; n - 1; i++) {
-            int i_mirror = 2 * C - i;
-            if (R &gt; i) {
-                P[i] = Math.min(R - i, P[i_mirror]);// 防止超出 R
-            } else {
-                P[i] = 0;// 等于 R 的情况
-            }
-
-            // 碰到之前讲的三种情况时候，需要利用中心扩展法
-            while (T.charAt(i + 1 + P[i]) == T.charAt(i - 1 - P[i])) {
-                P[i]++;
-            }
-
-            // 判断是否需要更新 R
-            if (i + P[i] &gt; R) {
-                C = i;
-                R = i + P[i];
-            }
-
+    // 找出 P 的最大值
+    int maxLen = 0;
+    int centerIndex = 0;
+    for (int i = 1; i &lt; n - 1; i++) {
+        if (P[i] &gt; maxLen) {
+            maxLen = P[i];
+            centerIndex = i;
         }
-
-        // 找出 P 的最大值
-        int maxLen = 0;
-        int centerIndex = 0;
-        for (int i = 1; i &lt; n - 1; i++) {
-            if (P[i] &gt; maxLen) {
-                maxLen = P[i];
-                centerIndex = i;
-            }
-        }
-        int start = (centerIndex - maxLen) / 2; //最开始讲的求原字符串下标
-        return s.substring(start, start + maxLen);
     }
+    int start = (centerIndex - maxLen) / 2; //最开始讲的求原字符串下标
+    return s.substring(start, start + maxLen);
+}
 ```
 
 时间复杂度：for 循环里边套了一层 while 循环，难道不是 O(n²)？不！其实是 O(n)。不严谨的想一下，因为 while 循环访问 R 右边的数字用来扩展，也就是那些还未求出的节点，然后不断扩展，而期间访问的节点下次就不会再进入 while 了，可以利用对称得到自己的解，所以每个节点访问都是常数次，所以是 O(n)。

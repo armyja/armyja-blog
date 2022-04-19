@@ -11,15 +11,17 @@ tags: WebStorm
 
 在 nodeJs 中输入以下命令：
 
-    npm install jade -g
-    ```<!--more-->
+```
+npm install jade -g
+```
 
-    ### 在 WebStorm 上添加 File Watchers　　
-    配置过程如下：
-    ![](https://home.armyja.cn/content/images/2016/04/----_20160404125026.png)
-    注意：
+### 在 WebStorm 上添加 File Watchers 　　
 
-    - `jade.cmd` 的路径一般在 `C:\Users\user_name\AppData\Roaming\npm\jade.cmd` 。
-    - `[-P]` 选项：编译时格式化 html 文件，若不添加此选项，则以压缩形式生成 html 文件。
+配置过程如下：
+![](https://home.armyja.cn/content/images/2016/04/----_20160404125026.png)
+注意：
 
-    enjoy ~
+- `jade.cmd` 的路径一般在 `C:\Users\user_name\AppData\Roaming\npm\jade.cmd` 。
+- `[-P]` 选项：编译时格式化 html 文件，若不添加此选项，则以压缩形式生成 html 文件。
+
+enjoy ~

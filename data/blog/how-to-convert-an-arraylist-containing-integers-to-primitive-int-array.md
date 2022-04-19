@@ -13,16 +13,16 @@ summary: 使用 java-8 的新特性，无需遍历即可轻松转换。
 先上源码伺候。
 
 ```java
-    Scanner scanner = new Scanner(System.in);
-    List<Integer> list = new ArrayList<>();
-    while (scanner.hasNext()) {
-        list.add(scanner.nextInt());
-    }
-    list.sort((o1, o2) -> o2 - o1);
-    list.forEach(System.out::println);
+Scanner scanner = new Scanner(System.in);
+List<Integer> list = new ArrayList<>();
+while (scanner.hasNext()) {
+    list.add(scanner.nextInt());
+}
+list.sort((o1, o2) -> o2 - o1);
+list.forEach(System.out::println);
 
-    // convert an ArrayList to primitive int[]
-    int[] arr = list.stream().mapToInt(i->i).toArray();
+// convert an ArrayList to primitive int[]
+int[] arr = list.stream().mapToInt(i->i).toArray();
 ```
 
 ---
@@ -33,7 +33,7 @@ summary: 使用 java-8 的新特性，无需遍历即可轻松转换。
 If you are using java-8 there's also another way to do this.
 
 ```java
-    int[] arr = list.stream().mapToInt(i -> i).toArray();
+int[] arr = list.stream().mapToInt(i -> i).toArray();
 ```
 
 What it does is:
@@ -45,24 +45,24 @@ What it does is:
 You could also explicitly call intValue via a method reference, i.e:
 
 ```java
-    int[] arr = list.stream().mapToInt(Integer::intValue).toArray();
+int[] arr = list.stream().mapToInt(Integer::intValue).toArray();
 ```
 
 It's also worth mentioning that you could get a NullPointerException if you have any null reference in the list. This could be easily avoided by adding a filtering condition to the stream pipeline like this:
 
 ```java
-    //.filter(Objects::nonNull) also works
-    int[] arr = list.stream().filter(i -> i != null).mapToInt(i -> i).toArray();
+//.filter(Objects::nonNull) also works
+int[] arr = list.stream().filter(i -> i != null).mapToInt(i -> i).toArray();
 ```
 
 Example:
 
 ```java
-    List<Integer> list = Arrays.asList(1, 2, 3, 4);
-    int[] arr = list.stream().mapToInt(i -> i).toArray(); //[1, 2, 3, 4]
+List<Integer> list = Arrays.asList(1, 2, 3, 4);
+int[] arr = list.stream().mapToInt(i -> i).toArray(); //[1, 2, 3, 4]
 
-    list.set(1, null); //[1, null, 3, 4]
-    arr = list.stream().filter(i -> i != null).mapToInt(i -> i).toArray(); //[1, 3, 4]
+list.set(1, null); //[1, null, 3, 4]
+arr = list.stream().filter(i -> i != null).mapToInt(i -> i).toArray(); //[1, 3, 4]
 ```
 
 最后再次感谢 [Alexis C.](http://stackoverflow.com/users/1587046/alexis-c) 的帮助～

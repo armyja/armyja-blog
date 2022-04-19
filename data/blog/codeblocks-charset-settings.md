@@ -12,8 +12,8 @@ summary: 进入 Settings-Editor，设置编码为 UTF-8。进入 Settings-Compil
 进入 Settings-Compiler 和 Settings-Debugger，设置编译参数为：
 
 ```bash
-    -finput-charset=UTF-8
-    -fexec-charset=GBK
+-finput-charset=UTF-8
+-fexec-charset=GBK
 ```
 
 ![设置 Release 模式编译参数](https://home.armyja.cn/content/images/2017/12/Snipaste_2017-12-04_20-03-11.png)

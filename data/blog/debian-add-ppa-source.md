@@ -15,9 +15,9 @@ summary: 尝试在 Deepin 系统上安装 Rime 输入法，安装过程中发现
 经过查询包得知 `add-apt-repository` 在 `python-software-properties` 这个软件包中
 
 ```bash
-    apt-get install python-software-properties
-    apt-get install apt-file
-    apt-file update
+apt-get install python-software-properties
+apt-get install apt-file
+apt-file update
 ```
 
 现在 Debian 就可以用 ”apt-file search PPA 源“ （ 例如 `apt-file search ppa:fcitx-team/nightly` ）来添加源了。

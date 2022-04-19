@@ -19,27 +19,35 @@ Linux 中查看某个软件的安装路径(地址)有时显得非常重要。比
 这里以 Oracle 为例。比如说我安装了 Oracle ，但是不知道文件都安装在哪些地方、放在哪些文件夹里，可以用下面的命令查看所有的文件路径
 
 在终端输入：
+···bash
+whereis oracle
 
-    whereis oracle
-
+````
 回车，如果你安装好了 Oracle ，就会显示文件安装的地址，例如我的显示(安装地址可能会不同)
-
-    oracle: /usr/bin/oracle   /usr/lib/oracle   /usr/share/oracle  /usr/share/man/man1/oracle.1.gz
+```bash
+oracle: /usr/bin/oracle   /usr/lib/oracle   /usr/share/oracle  /usr/share/man/man1/oracle.1.gz
+````
 
 可以看出来，Oracle 安装在这些目录里。
 
 如果你没有安装 Oracle 或者 Oracle 安装没成功，则不会显示文件路径出来。只提示:
 
+```
 oracle:
+```
 
 ### 二、查询运行文件所在路径：
 
 如果你只要查询文件的运行文件所在地址，直接用下面的命令就可以了（还是以 Oracle 为例）：
 
-    which oracle
+```bash
+which oracle
+```
 
 结果会显示：
 
-    /usr/bin/oracle
+```bash
+/usr/bin/oracle
+```
 
 原文链接：[http://www.cnblogs.com/qq78292959/archive/2012/03/04/2379763.html](http://www.cnblogs.com/qq78292959/archive/2012/03/04/2379763.html)

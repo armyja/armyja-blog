@@ -14,11 +14,12 @@ summary: f.lux 是一款根据时间变化来改变屏幕色温的软件。让�
 ### Ubuntu 安装教程
 
 在终端执行以下命令
+···bash
+sudo add-apt-repository ppa:nathan-renniewaldock/flux
+sudo apt-get update
+sudo apt-get install fluxgui
 
-    sudo add-apt-repository ppa:nathan-renniewaldock/flux
-    sudo apt-get update
-    sudo apt-get install fluxgui
-
+```
 打开软件 f.lux indicator applet
 ![f.lux indicator applet](https://home.armyja.cn/content/images/2017/01/-----2017-01-08-01-57-57.png)
 
@@ -31,3 +32,4 @@ summary: f.lux 是一款根据时间变化来改变屏幕色温的软件。让�
 在状态栏开启护眼模式。眼睛的舒适度大大提升！
 
 参考资料：[http://server.zol.com.cn/576/5765625_all.html#p5766436](http://server.zol.com.cn/576/5765625_all.html#p5766436)
+```

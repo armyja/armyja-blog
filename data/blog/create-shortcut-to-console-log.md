@@ -15,14 +15,14 @@ summary: 使用 Function.prototype.bind 创建 console.log 语法糖
 我最初是这样写的：
 
 ```javascript
-     var log = console.log;
-     log(..);
+var log = console.log;
+log(..);
 ```
 
 结果输出为：
 
 ```javascript
-    TypeError: Illegal invocation
+TypeError: Illegal invocation
 ```
 
 谷歌一番之后在[Stack Overflow](http://stackoverflow.com/questions/5456709/create-shortcut-to-console-log-in-chrome)上找到这个答案：
