@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import 'aplayer/dist/APlayer.min.css'
 import APlayer from 'aplayer'
-import { isServer } from '@/lib/utils/isServer'
-import dynamic from 'next/dynamic'
 import Aplayer from 'aplayer'
 
 const Music = ({ neteaseSongId: neteaseMusicId }: { neteaseSongId: string }) => {
