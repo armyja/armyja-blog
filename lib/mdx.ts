@@ -6,13 +6,10 @@ import matter from 'gray-matter'
 import getAllFilesRecursively from './utils/files'
 // Remark packages
 import remarkGfm from 'remark-gfm'
-import remarkFootnotes from 'remark-footnotes'
 import remarkMath from 'remark-math'
 import remarkExtractFrontmatter from './remark-extract-frontmatter'
 import remarkCodeTitles from './remark-code-title'
 import remarkTocHeadings from './remark-toc-headings'
-// todo
-// import remarkImgToJsx from './remark-img-to-jsx'
 // Rehype packages
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -69,11 +66,10 @@ export async function getFileBySlug(type: string, slug: string) {
       // plugins in the future.
       options.remarkPlugins = [
         ...(options.remarkPlugins ?? []),
-        // remarkExtractFrontmatter,
+        remarkExtractFrontmatter,
         [remarkTocHeadings, { exportRef: toc }],
         remarkGfm,
         remarkCodeTitles,
-        [remarkFootnotes, { inlineNotes: true }],
         remarkMath,
       ]
       options.rehypePlugins = [
