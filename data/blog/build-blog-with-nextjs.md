@@ -1,6 +1,6 @@
 ---
 title: 使用 Next.js 搭建博客
-slug: new-blog-on-nextjs
+slug: build-blog-with-nextjs
 date_published: 2022-04-20T15:28:31.964Z
 date_updated: 2022-04-20T15:28:31.964Z
 author: Jeffey Wang
