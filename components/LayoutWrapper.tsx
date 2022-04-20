@@ -40,16 +40,16 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   }
   return (
     <div className="h-screen">
-      <header className="fixed z-10 flex w-full items-center justify-between bg-white/80 py-3 px-4 shadow-md shadow-black/5 backdrop-blur-sm dark:bg-gray-900/80 dark:shadow-slate-400/5">
+      <header className="fixed z-10 flex w-full items-center justify-between bg-white/80 px-4 py-3 shadow-md shadow-black/5 backdrop-blur-sm dark:bg-gray-900/80 dark:shadow-slate-400/5">
         <div className="overflow-hidden">
           <div className={`h-8 transition-transform ${blogTitle && show ? '-translate-y-14' : ''}`}>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex">
-                <div className="relative h-8 w-8">
+                <div className="relative mt-1 h-7 w-8">
                   <Logo />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="ml-2 mb-1 hidden text-2xl  font-medium sm:block">
+                  <div className="mb-1 ml-2 hidden text-2xl font-medium sm:block">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (
