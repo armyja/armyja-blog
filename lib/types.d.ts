@@ -21,6 +21,7 @@ export type Blog = {
   tags: string[]
   summary: string
   draft: boolean
+  neteaseSongId?: string
   date_published: string
   date_updated: string
   layout?: 'PostLayout'

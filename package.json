@@ -6,6 +6,7 @@
     "watch": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
     "build": "next build",
+    "post-build": "mkdir out/_next/server && cp .next/server/middleware-* out/_next/server",
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
@@ -14,6 +15,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.2",
+    "aplayer": "^1.10.1",
     "esbuild": "^0.14.36",
     "github-slugger": "^1.4.0",
     "gray-matter": "^4.0.3",

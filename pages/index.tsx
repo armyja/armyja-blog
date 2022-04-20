@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import { Blog } from '@/lib/types'
 
+const Music = dynamic(() => import('@/components/Music'), { ssr: false })
 const MAX_DISPLAY = 5
 
 export async function getStaticProps() {
@@ -16,6 +17,7 @@ export async function getStaticProps() {
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 
 const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
   return (
@@ -38,9 +40,10 @@ const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
             <ul className="divide-y divide-gray-200 dark:divide-gray-700">
               {!posts.length && 'No posts found.'}
               {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-                const { slug, date_published, title, summary, tags }: Blog = frontMatter
+                const { slug, date_published, title, summary, tags, neteaseSongId }: Blog =
+                  frontMatter
                 return (
-                  <li key={slug} className="py-12">
+                  <li key={slug} className="py-5">
                     <article>
                       <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                         <dl>
@@ -50,7 +53,7 @@ const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
                           </dd>
                         </dl>
                         <div className="space-y-5 xl:col-span-3">
-                          <div className="space-y-6">
+                          <div className="space-y-2">
                             <div>
                               <h2 className="text-2xl font-bold leading-8 tracking-tight">
                                 <Link
@@ -66,11 +69,13 @@ const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
                                 ))}
                               </div>
                             </div>
+
+                            {neteaseSongId && <Music neteaseSongId={neteaseSongId}></Music>}
                             <div className="prose max-w-none text-gray-500 dark:text-gray-400">
                               {summary}
                             </div>
                           </div>
-                          <div className="text-base font-medium leading-6">
+                          {/* <div className="text-base font-medium leading-6">
                             <Link
                               href={`/blog/${slug}`}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
@@ -78,7 +83,7 @@ const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
                             >
                               阅读更多 &rarr;
                             </Link>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </article>
@@ -94,7 +99,7 @@ const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
                 className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 aria-label="all posts"
               >
-                All Posts &rarr;
+                全部文章 &rarr;
               </Link>
             </div>
           )}

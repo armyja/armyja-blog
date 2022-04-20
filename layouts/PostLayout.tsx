@@ -10,6 +10,9 @@ import siteMetadata from '@/data/siteMetadata'
 import ScrollTop from '@/components/ScrollTop'
 import { Author, Blog, BlogSEOProp } from '@/lib/types'
 import { ReactNode } from 'react'
+import dynamic from 'next/dynamic'
+
+const Music = dynamic(() => import('@/components/Music'), { ssr: false })
 
 const editUrl = (fileName: string) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 // const discussUrl = (slug: string) =>
@@ -25,7 +28,7 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
 }
 
 type PostLayoutProp = {
-  frontMatter: Omit<BlogSEOProp, 'url' | 'authorDetails'>
+  frontMatter: Omit<BlogSEOProp, 'url' | 'authorDetails'> & Blog
   authorDetails: Author[]
   next: Blog
   prev: Blog
@@ -39,7 +42,7 @@ export default function PostLayout({
   prev,
   children,
 }: PostLayoutProp) {
-  const { slug, fileName, date_published, title, tags } = frontMatter
+  const { slug, fileName, date_published, title, tags, neteaseSongId } = frontMatter
 
   return (
     <>
@@ -111,6 +114,7 @@ export default function PostLayout({
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
+              {neteaseSongId && <Music neteaseSongId={neteaseSongId}></Music>}
               <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 {/* <Link href={discussUrl(slug)} rel="nofollow">
