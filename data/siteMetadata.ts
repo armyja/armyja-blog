@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'Armyja',
+  title: '如若不燃',
   author: 'Jeffrey Wang',
-  headerTitle: '如若不燃',
+  headerTitle: 'Armyja',
   description: '酷爱蹦跶，穿梭堂狱',
   language: 'zh-CN',
   theme: 'system', // system, dark or light
