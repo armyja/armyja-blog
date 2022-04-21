@@ -10,11 +10,21 @@ github: https://github.com/armyja
 sinaWeibo: sinaweibo://userinfo?uid=1770048285
 ---
 
-## 现状
+<a href="https://github.com/armyja">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=armyja&count_private=true&theme=radical" />
+</a>
+
+## 介绍
 
 笔名：如若不燃  
 社交英文名：Armyja  
 前端开发者，熟悉 NodeJS、Vue，努力成为一名跨端工程师。
+
+## 现状
+
+- 🔭 I’m currently working on TypeScript
+- 🌱 I’m currently learning Rust
+- 👯 I’m looking to collaborate on everything interesting
 
 ## 职业经历
 
