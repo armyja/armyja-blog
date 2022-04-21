@@ -6,7 +6,8 @@ import CustomLink from './Link'
 import TOCInline from './TOCInline'
 import Pre from './Pre'
 import type { MDXComponents } from 'mdx/types'
-import { Author, Blog, TocHeading } from '@/lib/types'
+import { Author, Blog } from '@/lib/types'
+import { Toc } from 'types/Toc'
 // import { BlogNewsletterForm } from './NewsletterForm'
 
 export const mDXComponents: MDXComponents = {
@@ -28,7 +29,7 @@ export const MDXLayoutRenderer = ({
 }: {
   layout: string
   mdxSource: string
-  toc?: TocHeading[]
+  toc?: Toc
   frontMatter: Blog
   authorDetails?: Author[]
   prev?: Blog

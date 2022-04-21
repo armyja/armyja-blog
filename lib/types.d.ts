@@ -39,8 +39,3 @@ export type BlogSEOProp = {
   images: string[]
   canonicalUrl: string
 }
-export type TocHeading = {
-  value: string
-  depth: number
-  url: string
-}

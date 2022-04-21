@@ -6,6 +6,7 @@ import matter from 'gray-matter'
 import getAllFilesRecursively from './utils/files'
 // Remark packages
 import remarkGfm from 'remark-gfm'
+import remarkFootnotes from 'remark-footnotes'
 import remarkMath from 'remark-math'
 import remarkExtractFrontmatter from './remark-extract-frontmatter'
 import remarkCodeTitles from './remark-code-title'
@@ -17,8 +18,9 @@ import rehypeKatex from 'rehype-katex'
 import rehypeCitation from 'rehype-citation'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypePresetMinify from 'rehype-preset-minify'
-import { Blog, Pagination as P, TocHeading } from '@/lib/types'
+import { Blog, Pagination as P } from '@/lib/types'
 import convertStringTagToArray from './utils/formatTags'
+import { Toc } from 'types/Toc'
 
 type Frontmatter = {
   [key: string]: any
@@ -41,7 +43,7 @@ export function dateSortDesc(a: string, b: string) {
   return 0
 }
 
-export async function getFileBySlug(type: string, slug: string) {
+export async function getFileBySlug(type: string, slug: string | string[]) {
   const mdxPath = path.join(root, 'data', type, `${slug}.mdx`)
   const mdPath = path.join(root, 'data', type, `${slug}.md`)
   const source = fs.existsSync(mdxPath)
@@ -55,7 +57,7 @@ export async function getFileBySlug(type: string, slug: string) {
     process.env.ESBUILD_BINARY_PATH = path.join(root, 'node_modules', 'esbuild', 'bin', 'esbuild')
   }
 
-  let toc: TocHeading[] = []
+  let toc: Toc = []
   const { code, frontmatter } = await bundleMDX({
     source,
     // mdx imports can be automatically source from the components directory
@@ -70,6 +72,7 @@ export async function getFileBySlug(type: string, slug: string) {
         [remarkTocHeadings, { exportRef: toc }],
         remarkGfm,
         remarkCodeTitles,
+        [remarkFootnotes, { inlineNotes: true }],
         remarkMath,
       ]
       options.rehypePlugins = [

@@ -3,8 +3,9 @@ import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
-import { Author, Blog as B, TocHeading } from '@/lib/types'
+import { Author, Blog as B } from '@/lib/types'
 import { GetStaticProps } from 'next'
+import { Toc } from 'types/Toc'
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
@@ -48,7 +49,7 @@ export const getStaticProps: GetStaticProps = async function ({ params }) {
 type BlogProps = {
   post: {
     mdxSource: string
-    toc: TocHeading[]
+    toc: Toc
     // FIXME Guess??
     frontMatter: B
   }
