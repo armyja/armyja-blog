@@ -63,7 +63,7 @@ export default function Blog({ post, authorDetails, prev, next }: BlogProps) {
 
   return (
     <>
-      {frontMatter.draft !== true ? (
+      {process.env.NODE_ENV !== 'production' || frontMatter.draft !== true ? (
         <MDXLayoutRenderer
           layout={frontMatter.layout || DEFAULT_LAYOUT}
           toc={toc}
