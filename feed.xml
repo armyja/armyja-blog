@@ -7,9 +7,19 @@
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
-      <lastBuildDate>Wed, 19 May 2021 00:55:05 GMT</lastBuildDate>
+      <lastBuildDate>Wed, 27 Apr 2022 15:04:41 GMT</lastBuildDate>
       <atom:link href="https://armyja.cn/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://armyja.cn/blog/edge-url-paste</guid>
+    <title>Edge 浏览器复制粘贴 URL 显示网站标题</title>
+    <link>https://armyja.cn/blog/edge-url-paste</link>
+    <description>与预料的不同，当把 Edge 浏览器地址栏中的 https://collection.armyja.cn/v/front-end/ 粘贴到 Notion 时，显示的是超链接 【前端笔记 - Collection (armyja.cn)】。这是为什么呢？</description>
+    <pubDate>Wed, 27 Apr 2022 15:04:41 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    <category>JavaScript</category>
+  </item>
+
   <item>
     <guid>https://armyja.cn/blog/xss-gong-ji</guid>
     <title>XSS 攻击</title>
