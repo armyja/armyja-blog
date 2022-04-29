@@ -1,8 +1,8 @@
 ---
 title: 优秀网站
-slug: awsome-website
+slug: awesome-website
 date_published: 2016-05-14T09:06:00.000Z
-date_updated: 2019-01-10T05:22:06.000Z
+date_updated: 2022-04-29T07:27:45.878Z
 ---
 
 > 希望对你有所帮助
@@ -43,8 +43,9 @@ date_updated: 2019-01-10T05:22:06.000Z
 - [在线 grapviz 作图工具](http://www.webgraphviz.com/)
 - [nomnoml：UML 绘制工具](http://www.nomnoml.com)
 - [符号大全](https://fsymbols.com/)
-- [ASCII 绘制](http://asciiflow.com/)
+- [ASCII 绘制](https://asciiflow.com/)
 - [ASCII 绘制 2](http://www.asciidraw.com/)
+- [ASCII 流程图](https://asciiflow.cn/)
 - [ASCII 时序图](http://weidagang.github.io/text-diagram/)
 - [PlantText](https://www.planttext.com/)
 - [plantuml，使用简单的工具画 UML 图](http://plantuml.com)
@@ -53,6 +54,7 @@ date_updated: 2019-01-10T05:22:06.000Z
 - [语法树生成器](http://mshang.ca/syntree/)
 - [铁路图生成器](http://bottlecaps.de/rr/ui)
 - [漂亮的时序图](https://bramp.github.io/js-sequence-diagrams/)
+- [图片 Base64 编码](https://oktools.net/image2base64)
 
 ### 技术
 
