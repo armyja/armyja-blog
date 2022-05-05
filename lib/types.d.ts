@@ -25,6 +25,8 @@ export type Blog = {
   date_published: string
   date_updated: string
   layout?: 'PostLayout'
+  locale?: string
+  readingTime?: ReadTimeResults
 }
 export type BlogSEOProp = {
   fileName: string

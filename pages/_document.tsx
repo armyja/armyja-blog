@@ -1,8 +1,10 @@
+import languageDetector, { getDefaultLocale } from '@/lib/languageDetector'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   render() {
+    const currentLocale = (this.props.__NEXT_DATA__.query.locale || 'zh-Hans-CN') + ''
     return (
-      <Html lang="zh-Hans-CN" className="scroll-smooth">
+      <Html lang={currentLocale} className="scroll-smooth">
         <Head>
           <link
             rel="icon"

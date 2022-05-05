@@ -1,6 +1,6 @@
 ---
 title: XSS 攻击
-slug: xss-gong-ji
+slug: xss-attack
 date_published: 2021-05-19T00:55:05.000Z
 date_updated: 2021-05-19T00:55:05.000Z
 ---

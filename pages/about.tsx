@@ -1,26 +1,6 @@
-import { MDXLayoutRenderer } from '@/components/MDXComponents'
-import { getFileBySlug } from '@/lib/mdx'
-import { Author, Blog } from '@/lib/types'
+import { Redirect } from '../lib/redirect'
+import { makeStaticProps } from '@/lib/getStatic'
+export default Redirect
 
-const DEFAULT_LAYOUT = 'AuthorLayout'
-
-export async function getStaticProps() {
-  const authorDetails = await getFileBySlug('authors', 'default')
-  return { props: { authorDetails } }
-}
-
-export default function About({
-  authorDetails,
-}: {
-  authorDetails: { mdxSource: string; frontMatter: Blog }
-}) {
-  const { mdxSource, frontMatter } = authorDetails
-
-  return (
-    <MDXLayoutRenderer
-      layout={frontMatter.layout || DEFAULT_LAYOUT}
-      mdxSource={mdxSource}
-      frontMatter={frontMatter}
-    />
-  )
-}
+const getStaticProps = makeStaticProps(undefined)
+export { getStaticProps }

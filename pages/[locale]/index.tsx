@@ -9,17 +9,18 @@ import { Blog } from '@/lib/types'
 const Music = dynamic(() => import('@/components/Music'), { ssr: false })
 const MAX_DISPLAY = 5
 
-export async function getStaticProps(ctx: any) {
-  const posts = await getAllFilesFrontMatter('blog', getDefaultLocale())
-  return { props: { posts, ...(await getI18nProps(ctx)) } }
-}
-
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
+import { getI18nProps, getStaticPaths } from '@/lib/getStatic'
 import languageDetector, { getDefaultLocale } from '@/lib/languageDetector'
-import { getI18nProps } from '@/lib/getStatic'
 import { i18n } from 'next-i18next'
+export { getStaticPaths }
+
+export async function getStaticProps(ctx: any) {
+  const posts = await getAllFilesFrontMatter('blog', ctx?.params?.locale || getDefaultLocale())
+  return { props: { posts, ...(await getI18nProps(ctx, ['common'])) } }
+}
 
 const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
   languageDetector.cache && languageDetector.cache(i18n?.language || '')
@@ -62,7 +63,7 @@ const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
                             <div>
                               <h2 className="text-2xl font-bold leading-8 tracking-tight">
                                 <Link
-                                  href={`/blog/${slug}`}
+                                  href={`/${locale}/blog/${slug}`}
                                   className="text-gray-900 dark:text-gray-100"
                                 >
                                   {title}
@@ -100,9 +101,10 @@ const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
           {posts.length > MAX_DISPLAY && (
             <div className="flex justify-end text-base font-medium leading-6">
               <Link
-                href="/blog"
+                href="/blog/"
                 className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 aria-label="all posts"
+                prefixI18n
               >
                 全部文章 &rarr;
               </Link>

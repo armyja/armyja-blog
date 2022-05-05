@@ -1,6 +1,6 @@
 ---
 title: CSS：基于视窗单位的排版
-slug: css-vewport-based-typography
+slug: css-viewport-based-typography
 date_published: 2016-04-03T09:16:47.000Z
 date_updated: 2018-03-10T01:04:46.000Z
 author: Jeffey Wang

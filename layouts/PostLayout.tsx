@@ -11,6 +11,7 @@ import ScrollTop from '@/components/ScrollTop'
 import { Author, Blog, BlogSEOProp } from '@/lib/types'
 import { ReactNode } from 'react'
 import dynamic from 'next/dynamic'
+import { useTranslation } from 'next-i18next'
 
 const Music = dynamic(() => import('@/components/Music'), { ssr: false })
 
@@ -32,6 +33,7 @@ type PostLayoutProp = {
   authorDetails: Author[]
   next: Blog
   prev: Blog
+  otherLocales: string[]
   children: ReactNode
 }
 
@@ -40,10 +42,12 @@ export default function PostLayout({
   authorDetails,
   next,
   prev,
+  otherLocales = [],
   children,
 }: PostLayoutProp) {
-  const { slug, fileName, date_published, title, tags, neteaseSongId } = frontMatter
-
+  const { locale, slug, fileName, date_published, title, tags, neteaseSongId } = frontMatter
+  const { t, i18n } = useTranslation('post')
+  const defaultLocale = (i18n.options as any).defaultLocale as string
   return (
     <>
       <BlogSEO
@@ -61,10 +65,7 @@ export default function PostLayout({
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={new Date(date_published).toISOString()}>
-                      {new Date(date_published).toLocaleDateString(
-                        siteMetadata.locale,
-                        postDateTemplate
-                      )}
+                      {new Date(date_published).toLocaleDateString(locale, postDateTemplate)}
                     </time>
                   </dd>
                 </div>
@@ -72,6 +73,16 @@ export default function PostLayout({
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
+
+              {otherLocales.length > 0 &&
+                otherLocales.map((locale) => {
+                  const prefix = defaultLocale === locale ? '' : `/${locale}`
+                  return (
+                    <Link key={locale} href={`${prefix}/blog/${slug}`}>
+                      {locale}
+                    </Link>
+                  )
+                })}
             </div>
           </header>
           <div
@@ -121,7 +132,7 @@ export default function PostLayout({
                   {'Discuss on Twitter'}
                 </Link>
                 {` • `} */}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
+                <Link href={editUrl(fileName)}>{t('view-on-github')}</Link>
               </div>
               {/* <Comments frontMatter={frontMatter} /> */}
             </div>
@@ -144,7 +155,7 @@ export default function PostLayout({
                     {prev && (
                       <div>
                         <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                          Previous Article
+                          {t('previous-article')}
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
@@ -154,7 +165,7 @@ export default function PostLayout({
                     {next && (
                       <div>
                         <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                          Next Article
+                          {t('next-article')}
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${next.slug}`}>{next.title}</Link>
@@ -167,9 +178,10 @@ export default function PostLayout({
               <div className="pt-4 xl:pt-8">
                 <Link
                   href="/blog"
+                  prefixI18n
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  &larr; 返回
+                  &larr; {t('back')}
                 </Link>
               </div>
             </footer>

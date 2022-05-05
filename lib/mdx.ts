@@ -21,6 +21,7 @@ import rehypePresetMinify from 'rehype-preset-minify'
 import { Blog, Pagination as P } from '@/lib/types'
 import convertStringTagToArray from './utils/formatTags'
 import { Toc } from 'types/Toc'
+import { getDefaultLocale, getLanguageByFileName } from './languageDetector'
 
 type Frontmatter = {
   [key: string]: any
@@ -34,7 +35,7 @@ export function getFiles(type: string) {
 }
 
 export function formatSlug(slug: string) {
-  return (slug + '').replace(/\.(mdx|md)/, '')
+  return (slug + '').replace(/\.en/, '').replace(/\.(mdx|md)/, '')
 }
 
 export function dateSortDesc(a: string, b: string) {
@@ -43,9 +44,14 @@ export function dateSortDesc(a: string, b: string) {
   return 0
 }
 
-export async function getFileBySlug(type: string, slug: string | string[]) {
-  const mdxPath = path.join(root, 'data', type, `${slug}.mdx`)
-  const mdPath = path.join(root, 'data', type, `${slug}.md`)
+export async function getFileBySlug(
+  type: string,
+  slug: string | string[],
+  locale = getDefaultLocale()
+) {
+  const fileLanguageSuffix = locale === getDefaultLocale() ? '' : `.${locale}`
+  const mdxPath = path.join(root, 'data', type, `${slug}${fileLanguageSuffix}.mdx`)
+  const mdPath = path.join(root, 'data', type, `${slug}${fileLanguageSuffix}.md`)
   const source = fs.existsSync(mdxPath)
     ? fs.readFileSync(mdxPath, 'utf8')
     : fs.readFileSync(mdPath, 'utf8')
@@ -103,15 +109,17 @@ export async function getFileBySlug(type: string, slug: string | string[]) {
       authors: null,
       readingTime: readingTime(code),
       slug: slug || null,
-      fileName: fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`,
+      fileName: fs.existsSync(mdxPath)
+        ? `${slug}${fileLanguageSuffix}.mdx`
+        : `${slug}${fileLanguageSuffix}.md`,
+      locale,
       ...frontmatter,
     },
   }
 }
 
-export async function getAllFilesFrontMatter(folder: string) {
+export async function getAllFilesFrontMatter(folder: string, locale: string = '') {
   const prefixPaths = path.join(root, 'data', folder)
-
   const files = getAllFilesRecursively(prefixPaths)
   const allFrontMatter: Blog[] = []
 
@@ -127,6 +135,9 @@ export async function getAllFilesFrontMatter(folder: string) {
   files.forEach((file) => {
     // Replace is needed to work on Windows
     const fileName = file.slice(prefixPaths.length + 1).replace(/\\/g, '/')
+    if (locale !== '' && getLanguageByFileName(fileName) !== locale) {
+      return
+    }
     // Remove Unexpected File
     if (path.extname(fileName) !== '.md' && path.extname(fileName) !== '.mdx') {
       return
@@ -140,6 +151,7 @@ export async function getAllFilesFrontMatter(folder: string) {
       allFrontMatter.push({
         ...blog,
         ...frontmatter,
+        locale: locale || getLanguageByFileName(fileName),
       })
     }
   })

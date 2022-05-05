@@ -1,5 +1,7 @@
 {
   "files.associations": {
     "*.css": "tailwindcss"
-  }
+  },
+  "i18n-ally.localesPaths": ["out/locales", "public/locales"],
+  "i18n-ally.keystyle": "auto"
 }

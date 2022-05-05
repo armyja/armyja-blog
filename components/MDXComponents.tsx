@@ -32,6 +32,7 @@ export const MDXLayoutRenderer = ({
   toc?: Toc
   frontMatter: Blog
   authorDetails?: Author[]
+  otherLocales?: string[]
   prev?: Blog
   next?: Blog
 }) => {

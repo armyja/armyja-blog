@@ -76,6 +76,7 @@ const nextConfig = {
     path: '',
   },
   assetPrefix: isProd ? '' : '',
+  trailingSlash: true,
 }
 
 module.exports = module.exports = isProd

@@ -61,14 +61,14 @@ export default function ListLayout({
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
-            const { slug, date_published, title, summary, tags } = frontMatter
+            const { locale, slug, date_published, title, summary, tags } = frontMatter
             return (
               <li key={slug} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date_published}>{formatDate(date_published)}</time>
+                      <time dateTime={date_published}>{formatDate(date_published, locale)}</time>
                     </dd>
                   </dl>
                   <div className="space-y-3 xl:col-span-3">

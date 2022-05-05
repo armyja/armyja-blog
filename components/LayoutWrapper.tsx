@@ -9,6 +9,7 @@ import ThemeSwitch from './ThemeSwitch'
 import { CSSProperties, ReactNode, useEffect, useState } from 'react'
 import MobileNav from './MobileNav'
 import router from 'next/router'
+import { useTranslation } from 'next-i18next'
 
 const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   const [blogTitle, setBlogTitle] = useState('')
@@ -38,12 +39,13 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
     WebkitBoxOrient: 'vertical',
     overflow: 'hidden',
   }
+  const { t } = useTranslation('common')
   return (
     <div className="h-screen">
       <header className="fixed z-10 flex w-full items-center justify-between bg-white/80 px-4 py-3 shadow-md shadow-black/5 backdrop-blur-sm dark:bg-gray-900/80 dark:shadow-slate-400/5">
         <div className="overflow-hidden">
           <div className={`h-8 transition-transform ${blogTitle && show ? '-translate-y-14' : ''}`}>
-            <Link href="/" aria-label={siteMetadata.headerTitle}>
+            <Link href="/" prefixI18n aria-label={siteMetadata.headerTitle}>
               <div className="flex">
                 <div className="relative mt-1 h-7 w-8">
                   <Logo />
@@ -68,9 +70,9 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
               <Link
                 key={link.title}
                 href={link.href}
-                className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
+                className="p-1 font-medium uppercase text-gray-900 dark:text-gray-100 sm:p-4"
               >
-                {link.title}
+                {t(link.i18n, link.title)}
               </Link>
             ))}
           </div>

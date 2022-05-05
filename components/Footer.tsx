@@ -1,8 +1,10 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
+import { useTranslation } from 'next-i18next'
 
 export default function Footer() {
+  const { i18n } = useTranslation('common')
   return (
     <footer>
       <div className="mt-10 flex flex-col items-center">
@@ -20,10 +22,15 @@ export default function Footer() {
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
-          <Link href="/">{siteMetadata.title}</Link>
+          <Link href="/" prefixI18n>
+            {siteMetadata.title}
+          </Link>
         </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-8 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://beian.miit.gov.cn/">粤ICP备16027191号-1</Link>
+          <div>{` • `}</div>
+          {i18n.language === 'en' && <Link href="/">zh</Link>}
+          {i18n.language === 'zh' && <Link href="/en">en</Link>}
         </div>
       </div>
     </footer>

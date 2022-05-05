@@ -5,11 +5,11 @@ import ListLayout from '@/layouts/ListLayout'
 import { POSTS_PER_PAGE } from '../../blog'
 import { Blog, Pagination as P } from '@/lib/types'
 import { GetStaticProps } from 'next'
-import languageDetector, { getDefaultLocale } from '@/lib/languageDetector'
+import { getDefaultLocale } from '@/lib/languageDetector'
 import { getI18nProps } from '@/lib/getStatic'
 
 export async function getStaticPaths() {
-  const totalPosts = await getAllFilesFrontMatter('blog', getDefaultLocale())
+  const totalPosts = await getAllFilesFrontMatter('blog', '')
   const totalPageMap: { [key: string]: any } = {}
   for (let post of totalPosts) {
     if (!totalPageMap[post?.locale + '']) {

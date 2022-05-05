@@ -9,6 +9,7 @@ import fs from 'fs'
 import path from 'path'
 import { GetStaticProps, NextPage } from 'next'
 import { Blog } from '@/lib/types'
+import { getDefaultLocale } from '@/lib/languageDetector'
 
 const root = process.cwd()
 
@@ -32,7 +33,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps: GetStaticProps = async function ({ params }) {
   const tag: string = Array.isArray(params?.tag) ? '%' : params?.tag || '%'
-  const allPosts = await getAllFilesFrontMatter('blog')
+  const allPosts = await getAllFilesFrontMatter('blog', (params?.locale || getDefaultLocale()) + '')
   const filteredPosts = allPosts.filter(
     (post) => post.draft !== true && post.tags.map((t) => kebabCase(t)).includes(tag)
   )
