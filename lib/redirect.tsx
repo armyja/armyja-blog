@@ -10,19 +10,7 @@ export const useRedirect = (to: string) => {
   const locales = i18nextConfig.i18n.locales
   // language detection
   useEffect(() => {
-    console.log(i18n)
-    const detectedLng =
-      languageDetector
-        .detect
-        //   [
-        //   'querystring',
-        //   'cookie',
-        //   'htmlTag',
-        //   'localStorage',
-        //   'sessionStorage',
-        //   'navigator',
-        // ]
-        () || getDefaultLocale()
+    const detectedLng = languageDetector.detect() || getDefaultLocale()
     if (router.route === '/404') {
       const locale404 = locales.find((s) => s === to.split('/')[1] || '') || getDefaultLocale()
       // prevent endless loop
