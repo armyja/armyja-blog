@@ -11,7 +11,7 @@ export const POSTS_PER_PAGE = 5
 
 // export { getStaticPaths }
 export async function getStaticProps(ctx: any) {
-  const posts: B[] = await getAllFilesFrontMatter('blog', getDefaultLocale())
+  const posts: B[] = await getAllFilesFrontMatter('blog', ctx?.params?.locale || getDefaultLocale())
   const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
   const pagination = {
     currentPage: 1,
