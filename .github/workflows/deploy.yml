@@ -27,9 +27,7 @@ jobs:
           npm i
           npm run build
           npm run export
-          mkdir -p out/_next/server/
-          cp .next/server/middleware-* out/_next/server/
-
+          npm run post-export
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

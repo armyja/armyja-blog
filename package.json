@@ -6,8 +6,8 @@
     "watch": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
     "build": "next build",
-    "post-build": "mkdir out/_next/server && cp .next/server/middleware-* out/_next/server",
     "export": "next export",
+    "post-export": "node ./scripts/post-export.js",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install"
