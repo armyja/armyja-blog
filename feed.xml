@@ -21,9 +21,19 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/xss-gong-ji</guid>
+    <guid>https://armyja.cn/blog/xss-attack</guid>
+    <title>XSS Attack</title>
+    <link>https://armyja.cn/blog/xss-attack</link>
+    
+    <pubDate>Wed, 19 May 2021 00:55:05 GMT</pubDate>
+    <author>546323405@qq.com (Jeffrey Wang)</author>
+    
+  </item>
+
+  <item>
+    <guid>https://armyja.cn/blog/xss-attack</guid>
     <title>XSS 攻击</title>
-    <link>https://armyja.cn/blog/xss-gong-ji</link>
+    <link>https://armyja.cn/blog/xss-attack</link>
     
     <pubDate>Wed, 19 May 2021 00:55:05 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -451,9 +461,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/css-vewport-based-typography</guid>
+    <guid>https://armyja.cn/blog/css-viewport-based-typography</guid>
     <title>CSS：基于视窗单位的排版</title>
-    <link>https://armyja.cn/blog/css-vewport-based-typography</link>
+    <link>https://armyja.cn/blog/css-viewport-based-typography</link>
     <description>探索一下视窗单位以及如何在响应式排版中使用它们。</description>
     <pubDate>Sun, 03 Apr 2016 09:16:47 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
