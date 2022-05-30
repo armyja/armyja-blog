@@ -11,7 +11,8 @@ sinaWeibo: sinaweibo://userinfo?uid=1770048285
 ---
 
 <a href="https://github.com/armyja">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=armyja&count_private=true&theme=radical" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=armyja&count_private=true&theme=radical&show_icons=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR" alt="Armyja's GitHub stats" height="185px"  />
+  <img align="center" src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=armyja&layout=compact&langs_count=8&theme=radical&role=OWNER,COLLABORATOR" alt="Top Langs" height="185px" />
 </a>
 
 ## 介绍
