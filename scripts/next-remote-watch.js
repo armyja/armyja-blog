@@ -99,7 +99,7 @@ app.prepare().then(() => {
     // log message if present
     const msg = req.body.message
     const color = req.body.color
-    msg && console.log(color ? chalk[color](msg) : msg)
+    msg && console.log(color && typeof chalk[color] === 'function' ? chalk[color](msg) : msg)
 
     // reload the nextjs app
     app.server.hotReloader.send('building')
