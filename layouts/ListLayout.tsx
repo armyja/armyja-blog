@@ -20,7 +20,6 @@ export default function ListLayout({
   pagination?: P
 }) {
   const [searchValue, setSearchValue] = useState('')
-  console.log(initialDisplayPosts)
   const [filteredBlogPosts, setFilteredBlogPosts] = useState(new Array<Blog>())
   const displayPosts =
     searchValue.trim().length === 0
