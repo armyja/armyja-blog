@@ -43,7 +43,9 @@ function parseResult(json: any): Array<string> {
   if (list.length === 0) {
     return list
   }
-  return list.map((i: { file: { name: string } }) => i.file.name)
+  return list
+    .filter((s: { lineMatches: any[] }) => s.lineMatches.length > 0)
+    .map((i: { file: { name: string } }) => i.file.name)
 }
 
 async function fullTextSearch(text: string) {
