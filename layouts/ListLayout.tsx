@@ -20,6 +20,7 @@ export default function ListLayout({
   pagination?: P
 }) {
   const [searchValue, setSearchValue] = useState('')
+  const [loading, setLoading] = useState(false)
   const [filteredBlogPosts, setFilteredBlogPosts] = useState(new Array<Blog>())
   const displayPosts =
     searchValue.trim().length === 0
@@ -37,7 +38,7 @@ export default function ListLayout({
     })
     setFilteredBlogPosts(localfilteredBlogPosts)
     let existSlugs = new Set(localfilteredBlogPosts.map((s) => s.slug))
-
+    setLoading(true)
     fullTextSearch(searchValue).then((list) => {
       const allPostSlugsMap = new Map(posts.map((s) => [s.slug, s]))
       let filteredPostList = list
@@ -45,6 +46,7 @@ export default function ListLayout({
         .map((s) => s.split('.')[0])
         .filter((s) => allPostSlugsMap.has(s) && !existSlugs.has(s))
         .map((s) => allPostSlugsMap.get(s) || posts[0])
+      setLoading(false)
       setFilteredBlogPosts([...localfilteredBlogPosts, ...filteredPostList])
     })
   }, [posts, searchValue])
@@ -80,7 +82,8 @@ export default function ListLayout({
           </div>
         </div>
         <ul>
-          {!filteredBlogPosts.length && !displayPosts && 'No posts found.'}
+          {!filteredBlogPosts.length && !displayPosts.length && !loading && 'No posts found.'}
+          {!filteredBlogPosts.length && loading && 'Loading...'}
           {displayPosts.map((frontMatter) => {
             const { locale, slug, date_published, title, summary, tags } = frontMatter
             return (
