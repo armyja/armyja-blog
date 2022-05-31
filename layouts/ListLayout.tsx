@@ -1,9 +1,12 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 import { Blog, Pagination as P } from '@/lib/types'
+import fullTextSearch from '@/lib/fullTextSearch'
+import { getLanguageByFileName } from '@/lib/languageDetector'
+import { debounce } from 'lodash'
 
 export default function ListLayout({
   posts,
@@ -17,15 +20,34 @@ export default function ListLayout({
   pagination?: P
 }) {
   const [searchValue, setSearchValue] = useState('')
-  const filteredBlogPosts = posts.filter((frontMatter) => {
-    const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
-    return searchContent.toLowerCase().includes(searchValue.toLowerCase())
-  })
-
-  // If initialDisplayPosts exist, display it if no searchValue is specified
+  const [searchValue1, setSearchValue1] = useState('')
+  const [filteredBlogPosts, setFilteredBlogPosts] = useState(new Array<Blog>())
   const displayPosts =
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
+  console.log('asdasdad')
+  useEffect(() => {
+    setSearchValue1('asdas')
+    setSearchValue1('asdasss')
+    if (!!searchValue.trim() === false) {
+      return
+    }
+    const localfilteredBlogPosts = posts.filter((frontMatter) => {
+      const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
+      return searchContent.toLowerCase().includes(searchValue.toLowerCase())
+    })
+    setFilteredBlogPosts(localfilteredBlogPosts)
+    let existSlugs = new Set(localfilteredBlogPosts.map((s) => s.slug))
 
+    fullTextSearch(searchValue).then((list) => {
+      const allPostSlugsMap = new Map(posts.map((s) => [s.slug, s]))
+      let filteredPostList = list
+        .filter((s) => getLanguageByFileName(s) === posts[0].locale)
+        .map((s) => s.split('.')[0])
+        .filter((s) => allPostSlugsMap.has(s) && !existSlugs.has(s))
+        .map((s) => allPostSlugsMap.get(s) || posts[0])
+      setFilteredBlogPosts([...localfilteredBlogPosts, ...filteredPostList])
+    })
+  }, [posts, searchValue])
   return (
     <>
       <div className="divide-y">
@@ -37,7 +59,7 @@ export default function ListLayout({
             <input
               aria-label="Search articles"
               type="text"
-              onChange={(e) => setSearchValue(e.target.value)}
+              onChange={debounce((e) => setSearchValue(e.target.value), 500)}
               placeholder="Search articles"
               className="block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
             />
@@ -58,7 +80,7 @@ export default function ListLayout({
           </div>
         </div>
         <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
+          {!filteredBlogPosts.length && !displayPosts && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
             const { locale, slug, date_published, title, summary, tags } = frontMatter
             return (
