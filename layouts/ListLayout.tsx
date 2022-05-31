@@ -20,15 +20,16 @@ export default function ListLayout({
   pagination?: P
 }) {
   const [searchValue, setSearchValue] = useState('')
-  const [searchValue1, setSearchValue1] = useState('')
+  console.log(initialDisplayPosts)
   const [filteredBlogPosts, setFilteredBlogPosts] = useState(new Array<Blog>())
   const displayPosts =
-    initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
-  console.log('asdasdad')
+    searchValue.trim().length === 0
+      ? initialDisplayPosts.length > 0
+        ? initialDisplayPosts
+        : posts
+      : filteredBlogPosts
   useEffect(() => {
-    setSearchValue1('asdas')
-    setSearchValue1('asdasss')
-    if (!!searchValue.trim() === false) {
+    if (searchValue.trim().length === 0) {
       return
     }
     const localfilteredBlogPosts = posts.filter((frontMatter) => {
