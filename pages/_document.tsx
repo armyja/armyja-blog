@@ -1,5 +1,5 @@
-import languageDetector, { getDefaultLocale } from '@/lib/languageDetector'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+
 class MyDocument extends Document {
   render() {
     const currentLocale = (this.props.__NEXT_DATA__.query.locale || 'zh-Hans-CN') + ''
@@ -26,7 +26,6 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
            */}
-
           <link rel="manifest" href="/manifest.json" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
