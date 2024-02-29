@@ -5,7 +5,7 @@ const siteMetadata = {
   description: '酷爱蹦跶，穿梭堂狱',
   language: 'zh-CN',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://armyja.cn',
+  siteUrl: 'https://blog.armyja.fun',
   siteRepo: 'https://github.com/armyja/blog',
   sinaWeibo: 'https://weibo.com/armyja',
   siteLogo: '/static/images/logo.png',
