@@ -14,15 +14,15 @@ summary: 笔者太懒，不会提供响应式导航的完整代码。不过你�
 
 宽屏时，导航栏的标签呈横向分布；窄屏时，导航栏变成一个按钮，点击按钮可以展开/隐藏导航标签。
 
-![](https://home.armyja.cn/content/images/2016/06/--.png)
+![](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2016/06/--.png)
 
 宽屏显示导航栏
 
-![](https://home.armyja.cn/content/images/2016/06/---1.png)
+![](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2016/06/---1.png)
 
 窄屏隐藏导航栏
 
-![](https://home.armyja.cn/content/images/2016/06/---2.png)
+![](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2016/06/---2.png)
 
 窄屏显示导航栏
 
@@ -59,10 +59,10 @@ $('#btn-menu').click(function () {
 ```
 
 然而一个坑随之出现。。。当你在窄屏下满怀欣喜的测试 menu 按钮的时候...
-![](https://home.armyja.cn/content/images/2016/06/123-gif.gif)
+![](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2016/06/123-gif.gif)
 
 拉到宽屏却变成了这样...
-![](https://home.armyja.cn/content/images/2016/06/---3.png)
+![](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2016/06/---3.png)
 
 导航栏蜜汁消失？？？
 

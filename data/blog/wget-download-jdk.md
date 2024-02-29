@@ -14,10 +14,10 @@ wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2F
 
 效果见下图，jdk 已开始下载。
 
-![--_Screenshot_2018-10-20-13-31-44-837](https://home.armyja.cn/content/images/2018/10/--_Screenshot_2018-10-20-13-31-44-837.jpg)
+![--_Screenshot_2018-10-20-13-31-44-837](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2018/10/--_Screenshot_2018-10-20-13-31-44-837.jpg)
 
 Oracle 的官网下载页面需要加上 cookie 头部才能用 wget 顺利下载，版本号可以在官网上浏览后自行选择，当前最新的稳定版本 jdk-8u161。上述连接是通过勾选 accept 协议后右键复制 jdk 蓝色链接获取的。
-![JDK 1.8 下载页面](https://home.armyja.cn/content/images/2018/10/--_Screenshot_2018-10-20-13-27-29-144.jpg)
+![JDK 1.8 下载页面](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2018/10/--_Screenshot_2018-10-20-13-27-29-144.jpg)
 
 参考文章：
 
