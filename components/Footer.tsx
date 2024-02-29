@@ -27,7 +27,6 @@ export default function Footer() {
           </Link>
         </div>
         <div className="mb-8 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://beian.miit.gov.cn/">粤ICP备16027191号-1</Link>
           <div>{` • `}</div>
           {i18n.language === 'en' && <Link href="/">zh</Link>}
           {i18n.language === 'zh' && <Link href="/en">en</Link>}
