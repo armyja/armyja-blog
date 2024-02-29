@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>如若不燃</title>
-      <link>https://armyja.cn/blog</link>
+      <link>https://blog.armyja.fun/blog</link>
       <description>酷爱蹦跶，穿梭堂狱</description>
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
       <lastBuildDate>Sat, 07 Jan 2017 18:33:47 GMT</lastBuildDate>
-      <atom:link href="https://armyja.cn/tags/software/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://blog.armyja.fun/tags/software/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://armyja.cn/blog/linux-eye-protection-software</guid>
+    <guid>https://blog.armyja.fun/blog/linux-eye-protection-software</guid>
     <title>Linux 安装护眼软件 f.lux</title>
-    <link>https://armyja.cn/blog/linux-eye-protection-software</link>
+    <link>https://blog.armyja.fun/blog/linux-eye-protection-software</link>
     <description>f.lux 是一款根据时间变化来改变屏幕色温的软件。让你在深夜也能感受到太阳的温暖，顺便还有助于睡眠。</description>
     <pubDate>Sat, 07 Jan 2017 18:33:47 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>

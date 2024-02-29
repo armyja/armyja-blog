@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>如若不燃</title>
-      <link>https://armyja.cn/blog</link>
+      <link>https://blog.armyja.fun/blog</link>
       <description>酷爱蹦跶，穿梭堂狱</description>
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
       <lastBuildDate>Sat, 20 Oct 2018 05:32:55 GMT</lastBuildDate>
-      <atom:link href="https://armyja.cn/tags/java/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://blog.armyja.fun/tags/java/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://armyja.cn/blog/wget-download-jdk</guid>
+    <guid>https://blog.armyja.fun/blog/wget-download-jdk</guid>
     <title>使用 wget 下载 oracle jdk</title>
-    <link>https://armyja.cn/blog/wget-download-jdk</link>
+    <link>https://blog.armyja.fun/blog/wget-download-jdk</link>
     <description>目标：在腾讯云服务器上命令行直接安装 jdk。</description>
     <pubDate>Sat, 20 Oct 2018 05:32:55 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/java-simple-math-expression-calculator</guid>
+    <guid>https://blog.armyja.fun/blog/java-simple-math-expression-calculator</guid>
     <title>Java：简单的四则运算表达式解析</title>
-    <link>https://armyja.cn/blog/java-simple-math-expression-calculator</link>
+    <link>https://blog.armyja.fun/blog/java-simple-math-expression-calculator</link>
     <description>四则运算比如：a + b * c + (d - e)，编译器的做法一般是将其解析成逆波兰式之后再进行运算。</description>
     <pubDate>Mon, 10 Oct 2016 02:54:07 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -31,9 +31,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/how-to-convert-an-arraylist-containing-integers-to-primitive-int-array</guid>
+    <guid>https://blog.armyja.fun/blog/how-to-convert-an-arraylist-containing-integers-to-primitive-int-array</guid>
     <title>将包含整数 ArrayList 转换成 原始整数数组</title>
-    <link>https://armyja.cn/blog/how-to-convert-an-arraylist-containing-integers-to-primitive-int-array</link>
+    <link>https://blog.armyja.fun/blog/how-to-convert-an-arraylist-containing-integers-to-primitive-int-array</link>
     <description>使用 java-8 的新特性，无需遍历即可轻松转换。</description>
     <pubDate>Mon, 10 Oct 2016 02:50:19 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>

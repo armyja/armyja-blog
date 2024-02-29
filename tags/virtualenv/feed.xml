@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>如若不燃</title>
-      <link>https://armyja.cn/blog</link>
+      <link>https://blog.armyja.fun/blog</link>
       <description>酷爱蹦跶，穿梭堂狱</description>
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
       <lastBuildDate>Tue, 12 Jul 2016 02:59:43 GMT</lastBuildDate>
-      <atom:link href="https://armyja.cn/tags/virtualenv/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://blog.armyja.fun/tags/virtualenv/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://armyja.cn/blog/setup-supervisor-based-on-virtialenv</guid>
+    <guid>https://blog.armyja.fun/blog/setup-supervisor-based-on-virtialenv</guid>
     <title>配置基于 virtualenv 的 supervisor</title>
-    <link>https://armyja.cn/blog/setup-supervisor-based-on-virtialenv</link>
+    <link>https://blog.armyja.fun/blog/setup-supervisor-based-on-virtialenv</link>
     <description>supervisor 是基于 python 的任务管理工具，用来自动运行各种后台任务。virtualenv 是 python 的一个虚拟环境管理工具，用来部署运行不同的 python 版本。</description>
     <pubDate>Tue, 12 Jul 2016 02:59:43 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>

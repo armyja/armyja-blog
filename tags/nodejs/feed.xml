@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>如若不燃</title>
-      <link>https://armyja.cn/blog</link>
+      <link>https://blog.armyja.fun/blog</link>
       <description>酷爱蹦跶，穿梭堂狱</description>
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
       <lastBuildDate>Mon, 02 May 2016 14:42:54 GMT</lastBuildDate>
-      <atom:link href="https://armyja.cn/tags/nodejs/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://blog.armyja.fun/tags/nodejs/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://armyja.cn/blog/math-random</guid>
+    <guid>https://blog.armyja.fun/blog/math-random</guid>
     <title>Math.random()</title>
-    <link>https://armyja.cn/blog/math-random</link>
+    <link>https://blog.armyja.fun/blog/math-random</link>
     <description>唐纳德·克努特曾在《计算机程序设计的艺术》（卷二）中指出：“当今使用的大部分随机数生成器都不够优秀，而且开发者倾向于拿来就用，不去了解具体的生成策略。以至于我们常常发现一些略有瑕疵、年代久远的随机数生成器会被盲目地用在一个又一个的程序中，而对于它们的局限性，却无人问津。”</description>
     <pubDate>Mon, 02 May 2016 14:42:54 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/nodejszhong-exportsyu-module-exportsde-qu-bie-xiang-xi-jie-shao</guid>
+    <guid>https://blog.armyja.fun/blog/nodejszhong-exportsyu-module-exportsde-qu-bie-xiang-xi-jie-shao</guid>
     <title>Node.js：exports 与 module.exports 的区别</title>
-    <link>https://armyja.cn/blog/nodejszhong-exportsyu-module-exportsde-qu-bie-xiang-xi-jie-shao</link>
+    <link>https://blog.armyja.fun/blog/nodejszhong-exportsyu-module-exportsde-qu-bie-xiang-xi-jie-shao</link>
     
     <pubDate>Wed, 20 Apr 2016 03:35:49 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>

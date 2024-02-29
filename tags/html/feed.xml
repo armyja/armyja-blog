@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>如若不燃</title>
-      <link>https://armyja.cn/blog</link>
+      <link>https://blog.armyja.fun/blog</link>
       <description>酷爱蹦跶，穿梭堂狱</description>
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
       <lastBuildDate>Fri, 10 Jun 2016 16:41:40 GMT</lastBuildDate>
-      <atom:link href="https://armyja.cn/tags/html/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://blog.armyja.fun/tags/html/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://armyja.cn/blog/yong-jquery-shi-xian-xiang-ying-shi-dao-hang</guid>
+    <guid>https://blog.armyja.fun/blog/yong-jquery-shi-xian-xiang-ying-shi-dao-hang</guid>
     <title>造轮子——实现响应式导航</title>
-    <link>https://armyja.cn/blog/yong-jquery-shi-xian-xiang-ying-shi-dao-hang</link>
+    <link>https://blog.armyja.fun/blog/yong-jquery-shi-xian-xiang-ying-shi-dao-hang</link>
     <description>笔者太懒，不会提供响应式导航的完整代码。不过你会从本文中了解到响应式导航的实现原理。掌握了原理，你便会明白他并不神秘。</description>
     <pubDate>Fri, 10 Jun 2016 16:41:40 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/html-bi-ji</guid>
+    <guid>https://blog.armyja.fun/blog/html-bi-ji</guid>
     <title>Html 笔记</title>
-    <link>https://armyja.cn/blog/html-bi-ji</link>
+    <link>https://blog.armyja.fun/blog/html-bi-ji</link>
     
     <pubDate>Thu, 14 Apr 2016 16:06:31 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>

@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>如若不燃</title>
-      <link>https://armyja.cn/blog</link>
+      <link>https://blog.armyja.fun/blog</link>
       <description>酷爱蹦跶，穿梭堂狱</description>
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
       <lastBuildDate>Fri, 22 Dec 2017 02:28:00 GMT</lastBuildDate>
-      <atom:link href="https://armyja.cn/tags/unit/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://blog.armyja.fun/tags/unit/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://armyja.cn/blog/about-unit</guid>
+    <guid>https://blog.armyja.fun/blog/about-unit</guid>
     <title>K、M、G、T、P、E、B 单位</title>
-    <link>https://armyja.cn/blog/about-unit</link>
+    <link>https://blog.armyja.fun/blog/about-unit</link>
     <description>随着计算机硬盘制造技术的飞速发展，硬盘的存贮容量呈快速增长趋势，用来表示存贮空间的计量单位从过去的K升到M，又从M跃升至G甚至T。前几天，我们几个闲谈计算机的配置、存贮空间等问题时，说起“兆”这个单位，不免疑惑，1兆究竟等于10的几次方？通过一番追根朔源地考证，让我大开眼界。</description>
     <pubDate>Fri, 22 Dec 2017 02:28:00 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>

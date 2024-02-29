@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>如若不燃</title>
-      <link>https://armyja.cn/blog</link>
+      <link>https://blog.armyja.fun/blog</link>
       <description>酷爱蹦跶，穿梭堂狱</description>
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
       <lastBuildDate>Mon, 26 Feb 2018 09:21:07 GMT</lastBuildDate>
-      <atom:link href="https://armyja.cn/tags/ghost/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://blog.armyja.fun/tags/ghost/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://armyja.cn/blog/ghost-latex-formula-support</guid>
+    <guid>https://blog.armyja.fun/blog/ghost-latex-formula-support</guid>
     <title>让 Ghost 支持 LaTeX 数学公式</title>
-    <link>https://armyja.cn/blog/ghost-latex-formula-support</link>
+    <link>https://blog.armyja.fun/blog/ghost-latex-formula-support</link>
     <description>v1.0+ 版本的 Ghost 博客支持单篇文章的 Code Injection 功能，方便作者按需添加 JavaScript 或 CSS 代码，实现定制化。在 Code Injection 的 Post Footer 处粘贴 MathJax 脚本代码，即可支持 LaTeX 数学公式的显示。</description>
     <pubDate>Mon, 26 Feb 2018 09:21:07 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/ghost-xin-chuang-kou-da-kai-wai-lian</guid>
+    <guid>https://blog.armyja.fun/blog/ghost-xin-chuang-kou-da-kai-wai-lian</guid>
     <title>Ghost：  新窗口打开外链</title>
-    <link>https://armyja.cn/blog/ghost-xin-chuang-kou-da-kai-wai-lian</link>
+    <link>https://blog.armyja.fun/blog/ghost-xin-chuang-kou-da-kai-wai-lian</link>
     
     <pubDate>Sat, 26 Mar 2016 04:31:05 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -31,9 +31,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/ghost-shou-dong-zhi-ding-zhai-yao-wei-zhi</guid>
+    <guid>https://blog.armyja.fun/blog/ghost-shou-dong-zhi-ding-zhai-yao-wei-zhi</guid>
     <title>Ghost： 手动指定摘要位置</title>
-    <link>https://armyja.cn/blog/ghost-shou-dong-zhi-ding-zhai-yao-wei-zhi</link>
+    <link>https://blog.armyja.fun/blog/ghost-shou-dong-zhi-ding-zhai-yao-wei-zhi</link>
     
     <pubDate>Sat, 26 Mar 2016 03:41:00 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>

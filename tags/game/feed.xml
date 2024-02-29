@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>如若不燃</title>
-      <link>https://armyja.cn/blog</link>
+      <link>https://blog.armyja.fun/blog</link>
       <description>酷爱蹦跶，穿梭堂狱</description>
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
       <lastBuildDate>Mon, 30 May 2022 07:23:59 GMT</lastBuildDate>
-      <atom:link href="https://armyja.cn/tags/game/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://blog.armyja.fun/tags/game/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://armyja.cn/blog/games104-note</guid>
+    <guid>https://blog.armyja.fun/blog/games104-note</guid>
     <title>GAMES104 笔记</title>
-    <link>https://armyja.cn/blog/games104-note</link>
+    <link>https://blog.armyja.fun/blog/games104-note</link>
     <description>本课程将介绍现代游戏引擎所涉及的系统架构，技术点，引擎系统相关的知识。 通过该课程，你能够对游戏引擎建立起一个全面且完整的了解。 如果你动手能力足够强，你将能够跟随课程，从0到1搭建起一个完整的迷你游戏引擎。如本课程适合相关专业领域的学生、研究者，以及所有对游戏引擎设计和开发感兴趣的人。</description>
     <pubDate>Mon, 30 May 2022 07:23:59 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/undertale</guid>
+    <guid>https://blog.armyja.fun/blog/undertale</guid>
     <title>Undertale 传说之下</title>
-    <link>https://armyja.cn/blog/undertale</link>
+    <link>https://blog.armyja.fun/blog/undertale</link>
     <description>第一次了解 Undertale，是在网易云音乐听到其 OST「Stronger Than You」。这是一款打破常规的另类 RPG，且乐评率在 Steam 排名第一，是 2015 Steam 最佳游戏之一。好奇心促使我对它一探究竟。</description>
     <pubDate>Wed, 18 Jan 2017 15:16:22 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>

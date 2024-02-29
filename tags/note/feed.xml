@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>如若不燃</title>
-      <link>https://armyja.cn/blog</link>
+      <link>https://blog.armyja.fun/blog</link>
       <description>酷爱蹦跶，穿梭堂狱</description>
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
       <lastBuildDate>Thu, 08 Mar 2018 16:03:29 GMT</lastBuildDate>
-      <atom:link href="https://armyja.cn/tags/note/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://blog.armyja.fun/tags/note/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://armyja.cn/blog/deep-work-notes</guid>
+    <guid>https://blog.armyja.fun/blog/deep-work-notes</guid>
     <title>《深度工作》读书笔记</title>
-    <link>https://armyja.cn/blog/deep-work-notes</link>
+    <link>https://blog.armyja.fun/blog/deep-work-notes</link>
     <description>《深度工作》论述了“如何在网络时代善用脑力，创造真实价值，成为一个不可替代的人”。此书首先告诉你什么是深度工作，为什么要深度工作。在说服你承认深度工作的必要性后，提供深度工作所需的几个原则，以帮助你在有限的时间内获得精英级的产出。</description>
     <pubDate>Thu, 08 Mar 2018 16:03:29 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>

@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>如若不燃</title>
-      <link>https://armyja.cn/blog</link>
+      <link>https://blog.armyja.fun/blog</link>
       <description>酷爱蹦跶，穿梭堂狱</description>
       <language>zh-CN</language>
       <managingEditor>546323405@qq.com (Jeffrey Wang)</managingEditor>
       <webMaster>546323405@qq.com (Jeffrey Wang)</webMaster>
       <lastBuildDate>Wed, 27 Apr 2022 15:04:41 GMT</lastBuildDate>
-      <atom:link href="https://armyja.cn/tags/javascript/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://blog.armyja.fun/tags/javascript/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://armyja.cn/blog/edge-url-paste</guid>
+    <guid>https://blog.armyja.fun/blog/edge-url-paste</guid>
     <title>Edge 浏览器复制粘贴 URL 显示网站标题</title>
-    <link>https://armyja.cn/blog/edge-url-paste</link>
+    <link>https://blog.armyja.fun/blog/edge-url-paste</link>
     <description>与预料的不同，当把 Edge 浏览器地址栏中的 https://collection.armyja.cn/v/front-end/ 粘贴到 Notion 时，显示的是超链接 【前端笔记 - Collection (armyja.cn)】。这是为什么呢？</description>
     <pubDate>Wed, 27 Apr 2022 15:04:41 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/create-shortcut-to-console-log</guid>
+    <guid>https://blog.armyja.fun/blog/create-shortcut-to-console-log</guid>
     <title>console.log() 如何缩写为 log()</title>
-    <link>https://armyja.cn/blog/create-shortcut-to-console-log</link>
+    <link>https://blog.armyja.fun/blog/create-shortcut-to-console-log</link>
     <description>使用 Function.prototype.bind 创建 console.log 语法糖</description>
     <pubDate>Fri, 23 Mar 2018 07:31:43 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -31,9 +31,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/12-extremely-useful-hacks-for-javascript</guid>
+    <guid>https://blog.armyja.fun/blog/12-extremely-useful-hacks-for-javascript</guid>
     <title>12 个 JavaScript 技巧</title>
-    <link>https://armyja.cn/blog/12-extremely-useful-hacks-for-javascript</link>
+    <link>https://blog.armyja.fun/blog/12-extremely-useful-hacks-for-javascript</link>
     <description>在这篇文章中将给大家分享12个有关于JavaScript的小技巧。这些小技巧可能在你的实际工作中或许能帮助你解决一些问题。</description>
     <pubDate>Thu, 12 May 2016 15:39:59 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
@@ -41,9 +41,9 @@
   </item>
 
   <item>
-    <guid>https://armyja.cn/blog/javascript-visual-sort</guid>
+    <guid>https://blog.armyja.fun/blog/javascript-visual-sort</guid>
     <title>JavaScript：可视化排序</title>
-    <link>https://armyja.cn/blog/javascript-visual-sort</link>
+    <link>https://blog.armyja.fun/blog/javascript-visual-sort</link>
     <description>十分艰难地做了这道百度前端学院的题目，因为展示效果挺赞就贴到博客上。代码命名混乱，冗余略多，木有对齐，注释特少。若看不太懂，请见谅。</description>
     <pubDate>Fri, 08 Apr 2016 17:34:08 GMT</pubDate>
     <author>546323405@qq.com (Jeffrey Wang)</author>
