@@ -1,5 +1,5 @@
 const url = 'https://sourcegraph.com/.api/graphql'
-const authorizationCode = '200a53748f09b3f682453275d04b126a7f03ded8'
+const authorizationCode = 'token sgp_a0d7ccb4f752ea73_8ac7578be3490f1c3fd67d0079f9c59b20668461'
 const graphql = `
 query ($query: String!) {
     search(query: $query, version: V2) {
