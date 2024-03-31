@@ -11,3 +11,8 @@ summaryLength = 0
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+enableGitInfo = true
+
+[frontmatter]
+  lastmod = [':git', 'lastmod', ':fileModTime', ':default']
