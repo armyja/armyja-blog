@@ -17,7 +17,7 @@ title = "如若不燃的博客"
   # image = "img/author.jpg"
   headline = "酷爱蹦跶，穿梭堂狱"
   bio = "工程师"
-  # links = [
+  links = [
   #   { email = "mailto:hello@your_domain.com" },
   #   { link = "https://link-to-some-website.com/" },
   #   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
@@ -30,7 +30,7 @@ title = "如若不燃的博客"
   #   { facebook = "https://facebook.com/username" },
   #   { flickr = "https://www.flickr.com/photos/username/" },
   #   { foursquare = "https://foursquare.com/username" },
-  { github = "https://github.com/armyja" },
+  { github = "https://github.com/armyja" }
   #   { gitlab = "https://gitlab.com/username" },
   #   { google = "https://www.google.com/" },
   #   { google-scholar = "https://scholar.google.com/citations?user=user-id" },
@@ -61,4 +61,4 @@ title = "如若不燃的博客"
   #   { whatsapp = "https://wa.me/phone-number" },
   #   { x-twitter = "https://twitter.com/username" },
   #   { youtube = "https://youtube.com/username" },
-  # ]
+  ]
