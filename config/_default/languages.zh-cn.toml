@@ -7,7 +7,7 @@ title = "如若不燃的博客"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 [params]
-  dateFormat = "2024-01-01"
+  dateFormat = "2006-01-02 15:04 Z07"
 
   # mainSections = ["section1", "section2"]
   # description = "My awesome website"
