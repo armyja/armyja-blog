@@ -21,13 +21,13 @@ sudo apt-get install fluxgui
 
 ```
 打开软件 f.lux indicator applet
-![f.lux indicator applet](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2017/01/-----2017-01-08-01-57-57.png)
+![f.lux indicator applet](https://bucket.armyja-online.uk/blog/content/images/2017/01/-----2017-01-08-01-57-57.png)
 
-![f.lux Settings](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2017/01/-----2017-01-08-02-06-56.png)
+![f.lux Settings](https://bucket.armyja-online.uk/blog/content/images/2017/01/-----2017-01-08-02-06-56.png)
 
 在 [http://www.mapcoordinates.net/en](http://www.mapcoordinates.net/en) 查询并输入经纬度后，关闭窗口。(谷歌地图需翻墙查看)
 
-![Open f.lux](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2017/01/-----2017-01-08-02-11-29.png)
+![Open f.lux](https://bucket.armyja-online.uk/blog/content/images/2017/01/-----2017-01-08-02-11-29.png)
 
 在状态栏开启护眼模式。眼睛的舒适度大大提升！
 

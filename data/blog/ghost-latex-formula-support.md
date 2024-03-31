@@ -10,7 +10,7 @@ summary: v1.0+ 版本的 Ghost 博客支持单篇文章的 Code Injection 功能
 
 v1.0+ 版本的 Ghost 博客支持单篇文章的 Code Injection 功能，方便作者按需添加 JavaScript 或 CSS 代码，实现定制化。
 
-![ode Injection in Post Setting](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2018/02/----_----_20180226163838.png)
+![ode Injection in Post Setting](https://bucket.armyja-online.uk/blog/content/images/2018/02/----_----_20180226163838.png)
 
 在 Code Injection 的 Post Footer 处粘贴 MathJax 脚本代码，即可支持 LaTeX 数学公式的显示。
 
@@ -31,7 +31,7 @@ v1.0+ 版本的 Ghost 博客支持单篇文章的 Code Injection 功能，方便
 
 粘贴后效果如下。
 
-![Support MathJax in Post Footer](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2018/02/----_----_20180226164424.png)
+![Support MathJax in Post Footer](https://bucket.armyja-online.uk/blog/content/images/2018/02/----_----_20180226164424.png)
 
 在文章编辑区中可以尝试以下两个例子：
 

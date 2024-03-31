@@ -18,7 +18,7 @@ npm install jade -g
 ### 在 WebStorm 上添加 File Watchers 　　
 
 配置过程如下：
-![](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2016/04/----_20160404125026.png)
+![](https://bucket.armyja-online.uk/blog/content/images/2016/04/----_20160404125026.png)
 注意：
 
 - `jade.cmd` 的路径一般在 `C:\Users\user_name\AppData\Roaming\npm\jade.cmd` 。

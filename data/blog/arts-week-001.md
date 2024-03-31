@@ -147,7 +147,7 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
 [https://stackoverflow.com/questions/8774024/intellij-working-on-multiple-projects](https://stackoverflow.com/questions/8774024/intellij-working-on-multiple-projects)
 
-![import module](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2019/08/---.jpg)
+![import module](https://bucket.armyja-online.uk/blog/content/images/2019/08/---.jpg)
 
 ## 配置 HotSwap
 
@@ -177,7 +177,7 @@ or you can type below shortcut via keyboard;
 
 Then, you can check Make project automatically as in below picture;
 
-![Make project automatically](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2019/08/N7v5k.png.jpg)
+![Make project automatically](https://bucket.armyja-online.uk/blog/content/images/2019/08/N7v5k.png.jpg)
 
 Secondly, you need to modify compiler.automake.allow.when.app.running registry setting as true.
 
@@ -189,16 +189,16 @@ To open registry, you need to click below keyboard shortcut:
 
 Type registry as in below picture, select Registry, and hit enter button of keyboard;
 
-![Registry](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2019/08/zWMgO.png)
+![Registry](https://bucket.armyja-online.uk/blog/content/images/2019/08/zWMgO.png)
 
 After Registry window opened, type compiler.automake to see compiler.automake.allow.when.app.running option, and check it as in below picture;
 
-![automake](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2019/08/K2AAA.png)
+![automake](https://bucket.armyja-online.uk/blog/content/images/2019/08/K2AAA.png)
 
 Than, you need to restart IntelliJ to make registry changes work.
 
 Go to Setting --> Select Debug --> HotSwap
-![HotSwap](https://blog-armyja.oss-accelerate.aliyuncs.com/content/images/2019/08/uUB99.png)
+![HotSwap](https://bucket.armyja-online.uk/blog/content/images/2019/08/uUB99.png)
 
 # Share：分享一篇有观点和思考的技术文章
 
