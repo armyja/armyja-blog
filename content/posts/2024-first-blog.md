@@ -9,10 +9,10 @@ keywords: []
 description: ""
 ---
 ## 加油
+
 你好棒
 
+来听音乐吧
 {{< music id="2118754864" type="song" server="netease" >}}
 
-<p align="center">
-来听音乐吧
-</p>
+![GMA全球音乐奖获奖](https://bucket.armyja-online.uk/blog/1711948205956.jpg)
