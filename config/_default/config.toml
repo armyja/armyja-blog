@@ -15,4 +15,4 @@ summaryLength = 0
 enableGitInfo = true
 
 [frontmatter]
-  lastmod = [':git', 'lastmod', ':fileModTime', ':default']
+  lastmod = ['lastmod', ':fileModTime', ':default']
