@@ -7,10 +7,10 @@ title = "如若不燃"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 [params]
-  dateFormat = "2006-01-02 15:04 Z07"
+  dateFormat = "2006-01-02"
 
   # mainSections = ["section1", "section2"]
-  # description = "My awesome website"
+  description = "酷爱蹦跶，穿梭堂狱"
 
 [params.author]
   name = "Armyja"
