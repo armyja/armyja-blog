@@ -1,9 +1,11 @@
 ---
 title: "QueryDSL源码阅读"
 date: 2024-04-04T22:32:00+08:00
+lastmod: 2024-04-05
 draft: false
 author: "Armyja"
 tags: ["QueryDSL", "Code Reading"]
+showTableOfContents: true
 keywords: []
 description: "QueryDSL是一个强大的框架,它使Java开发人员能够以类型安全的方式构建SQL查询。"
 ---
@@ -20,6 +22,8 @@ description: "QueryDSL是一个强大的框架,它使Java开发人员能够以�
 - QueryDSL查询也更易于维护。相比晦涩的SQL字符串,QueryDSL查询的代码结构更清晰,注释也更易于编写和理解。
 
 总之,QueryDSL让我们能够以一种现代、类型安全和面向对象的方式来构建查询,极大地提高了生产力和代码质量。它是Java持久层编程中非常有价值的工具。
+
+关于QueryDSL的使用示例，可以参考 Jay Kim 的[文章](https://jskim1991.medium.com/spring-boot-exploring-spring-boot-3-with-querydsl-part-2-7b563c382192) 和[代码仓库](https://github.com/jskim1991/spring-boot-querydsl-sample)。
 
 ## 模块分析
 
@@ -92,7 +96,41 @@ public String visit(Operation<?> o, Templates templates) {
   }
 }
 ```
----
-未完待续...
-- [ ] Constant
-- [ ] Path
+
+### Constant
+Constant接口代表一个通用的常量表达式。它继承自 Expression 接口,并定义了一个 getConstant() 方法来获取包装的常量值。
+
+与之相关的主要类有:
+
+`ConstantImpl`  
+这是 Constant 接口的实现类,它包装了实际的常量值。在 ConstantImpl 中,有一个泛型字段 constant 用于存储常量值。
+
+`Expressions`  
+这是一个工具类,提供了创建常量表达式的静态方法 constant(T value)。它内部调用了 ConstantImpl.create(value) 来构造常量表达式。
+
+一些测试用的常量类  
+在测试代码中,有一些继承自 `ConstantImpl` 的常量类,如 `TimeConstant`、`DateConstant`、`StringConstant`、`NumberConstant` 等,用于测试不同类型的常量表达式。
+
+总的来说,`Constant` 接口定义了常量表达式的契约,`ConstantImpl` 是其实现,而 `Expressions` 工具类提供了创建常量表达式的便捷方法。在查询DSL中,常量表达式可以用于构建查询条件、投影等。
+
+### Path
+Path接口代表一个路径表达式。路径表达式指的是对变量、属性和集合成员的访问。它继承自 Expression 接口。
+
+Path 接口定义了以下几个主要方法:
+
+- getMetadata()：获取该路径的元数据。
+- getRoot()：获取该路径的根路径。
+- getAnnotatedElement()：获取与该路径相关的注解元素。
+
+与 Path 接口相关的主要类有:
+
+- PathMetadata：封装了路径的元数据信息,如路径类型、父路径等。
+- PathImpl：Path 接口的默认实现类。
+- 一些具体的路径类,如 SimplePath、BeanPath、CollectionPath、MapPath 等,分别代表不同类型的路径。  
+这些具体的路径类通常作为查询的起点,例如:  
+  ```java
+  QEmployee employee = QEmployee.employee;
+  employee.firstName // 代表 employee 对象的 firstName 属性路径
+  ```
+
+在查询DSL中,路径表达式用于构建查询条件、投影等。通过路径表达式,可以方便地访问对象的属性、集合元素等。Path 接口定义了路径表达式的基本契约,而具体的路径类型由不同的实现类来表示。
