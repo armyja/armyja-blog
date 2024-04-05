@@ -4,7 +4,8 @@ date: 2024-04-04T22:32:00+08:00
 lastmod: 2024-04-05
 draft: false
 author: "Armyja"
-tags: ["QueryDSL", "Code Reading"]
+tags: ["QueryDSL"]
+categories: ["Code Reading"]
 showTableOfContents: true
 keywords: []
 description: "QueryDSL是一个强大的框架,它使Java开发人员能够以类型安全的方式构建SQL查询。"
