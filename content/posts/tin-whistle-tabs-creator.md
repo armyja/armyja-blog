@@ -1,5 +1,5 @@
 ---
-title: 洞洞谱制作
+title: 洞洞谱制作器
 date: 2024-05-10T00:04:41+08:00
 lastmod: 2024-05-10T00:04:41+08:00
 draft: false
@@ -12,7 +12,7 @@ showComments: true
 <html>
 
 <head>
-    <title>洞洞谱制作</title>
+    <title>洞洞谱制作器</title>
     <meta name=viewport content="width = device-width, initial-scale = 1">
     <style>
         .l {
