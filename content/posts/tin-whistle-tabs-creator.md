@@ -52,7 +52,7 @@ showComments: true
     </div>
     <script>
         normal = {
-            ' ': '<span class="l"> </span>',
+            ' ': '<span class="l">&nbsp;</span>',
             '\n': '<br/><br/>'
         }
         one = {
