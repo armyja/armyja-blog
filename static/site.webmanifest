@@ -1,0 +1,26 @@
+{
+  "name": "如若不燃",
+  "short_name": "如若不燃",
+  "theme_color": "#FFFFFF",
+  "description": "酷爱蹦跶，穿梭堂狱",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "lang": "zh-cmn-Hans",
+  "prefer_related_applications": true,
+  "icons": [
+    {
+      "src": "manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
